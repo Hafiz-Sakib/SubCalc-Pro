@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 /* Ensure dark background at root level */
-html, body, #root {
+html,
+body,
+#root {
   background-color: #080c14;
   min-height: 100%;
 }
