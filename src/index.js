@@ -24,6 +24,7 @@ import "./App.css";
 import NetworkTrafficChart from "./NetworkTrafficChart";
 import SubnetPieChart from "./SubnetPieChart";
 import IPTimeline from "./iptimeline";
+import NotFound from "./NotFound";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -50,6 +51,7 @@ root.render(
       <Route path="/NetworkTrafficChart" element={<NetworkTrafficChart />} />
       <Route path="/SubnetPieChart" element={<SubnetPieChart />} />
       <Route path="/iptimeline" element={<IPTimeline />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>,
 );

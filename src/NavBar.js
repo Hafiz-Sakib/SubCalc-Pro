@@ -30,7 +30,44 @@ const moreLinks = allLinks.slice(5);
 export default function NavBar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const menuRef = useRef(null);
+  const moreRef = useRef(null);
+  const closeTimer = useRef(null);
+
+  const openMore = () => {
+    clearTimeout(closeTimer.current);
+    setMoreOpen(true);
+  };
+  const closeMoreDelayed = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMoreOpen(false), 150);
+  };
+
+  // Close "More" dropdown on route change
+  useEffect(() => {
+    setMoreOpen(false);
+  }, [location.pathname]);
+
+  // Close "More" dropdown on outside click, and on Escape
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (moreRef.current && !moreRef.current.contains(e.target)) {
+        setMoreOpen(false);
+      }
+    };
+    const handleKey = (e) => {
+      if (e.key === "Escape") setMoreOpen(false);
+    };
+    if (moreOpen) {
+      document.addEventListener("mousedown", handleClick);
+      document.addEventListener("keydown", handleKey);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [moreOpen]);
 
   // Close menu on route change
   useEffect(() => {
@@ -115,18 +152,37 @@ export default function NavBar() {
           ))}
 
           {/* More dropdown */}
-          <div className="nav-more-wrapper">
-            <button className="nav-more-btn">More ▾</button>
-            <div className="nav-more-dropdown">
-              {moreLinks.map(({ to, label }) => (
-                <Link
-                  key={to}
-                  to={to}
-                  className={`nav-more-item ${location.pathname === to ? "active" : ""}`}
-                >
-                  {label}
-                </Link>
-              ))}
+          <div
+            className="nav-more-wrapper"
+            ref={moreRef}
+            onMouseEnter={openMore}
+            onMouseLeave={closeMoreDelayed}
+          >
+            <button
+              className="nav-more-btn"
+              onClick={() => setMoreOpen((o) => !o)}
+              aria-haspopup="true"
+              aria-expanded={moreOpen}
+            >
+              More ▾
+            </button>
+            <div
+              className={`nav-more-dropdown ${moreOpen ? "open" : ""}`}
+              role="menu"
+            >
+              <div className="nav-more-dropdown-inner">
+                {moreLinks.map(({ to, label }) => (
+                  <Link
+                    key={to}
+                    to={to}
+                    role="menuitem"
+                    className={`nav-more-item ${location.pathname === to ? "active" : ""}`}
+                    onClick={() => setMoreOpen(false)}
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -517,20 +517,30 @@ h4 {
 .nav-more-dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  /* No gap between button and dropdown — a gap here creates a dead zone
+     the mouse pointer falls through, closing the menu before it arrives. */
+  top: 100%;
   right: 0;
+  margin-top: 8px;
+  padding-top: 8px;
+  background: transparent;
+  z-index: 300;
+}
+.nav-more-dropdown-inner {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: 8px;
   min-width: 160px;
-  z-index: 300;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-}
-.nav-more-wrapper:hover .nav-more-dropdown {
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.nav-more-wrapper:hover .nav-more-dropdown,
+.nav-more-wrapper:focus-within .nav-more-dropdown,
+.nav-more-dropdown.open {
+  display: block;
 }
 .nav-more-item {
   display: block;
