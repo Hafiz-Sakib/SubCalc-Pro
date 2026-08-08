@@ -209,7 +209,7 @@ export default function IPClass() {
               <div>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 20,
                     fontWeight: 800,
                     color: "var(--orange)",
@@ -266,7 +266,7 @@ export default function IPClass() {
                 >
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 32,
                       fontWeight: 800,
                       color: result.data.color,
@@ -342,7 +342,7 @@ export default function IPClass() {
                 >
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 11,
                       color: "var(--text-muted)",
                       textTransform: "uppercase",
@@ -353,7 +353,7 @@ export default function IPClass() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 13,
                       color: "var(--text-secondary)",
                     }}
@@ -412,7 +412,7 @@ export default function IPClass() {
                 >
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 22,
                       fontWeight: 800,
                       color: d.color,
@@ -426,7 +426,7 @@ export default function IPClass() {
                   style={{
                     fontSize: 11,
                     color: "var(--text-muted)",
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                   }}
                 >
                   {d.defaultMask}
@@ -435,7 +435,7 @@ export default function IPClass() {
                   style={{
                     fontSize: 11,
                     color: "var(--text-muted)",
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     marginTop: 2,
                   }}
                 >

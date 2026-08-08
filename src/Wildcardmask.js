@@ -284,7 +284,7 @@ export default function WildcardMask() {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     color: "var(--text-muted)",
                     textTransform: "uppercase",
@@ -296,7 +296,7 @@ export default function WildcardMask() {
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 13,
                       color: color || "var(--text-secondary)",
                     }}
@@ -328,7 +328,7 @@ export default function WildcardMask() {
           >
             <span
               style={{
-                fontFamily: "Nunito, sans-serif",
+                fontFamily: "Operator Mono, monospace",
                 fontSize: 11,
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -366,7 +366,7 @@ export default function WildcardMask() {
                     <td>
                       <span
                         style={{
-                          fontFamily: "Nunito, sans-serif",
+                          fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
                         }}
                       >
@@ -376,7 +376,7 @@ export default function WildcardMask() {
                     <td>
                       <span
                         style={{
-                          fontFamily: "Nunito, sans-serif",
+                          fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
                           color: "var(--orange)",
                         }}

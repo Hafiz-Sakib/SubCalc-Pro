@@ -199,13 +199,13 @@ function NormalSubnetForm() {
           {history.length > 0 && (
             <div className="animate-fadeInUp stagger-2">
               <div style={{ marginBottom: 12 }}>
-                <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent</span>
+                <span style={{ fontFamily: 'Operator Mono, monospace', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {history.map((h, i) => (
                   <div key={i} className="history-item" onClick={() => loadHistory(h)}>
                     <div>
-                      <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontFamily: 'Nunito, sans-serif' }}>{h.ip}/{h.mask}</div>
+                      <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontFamily: 'Operator Mono, monospace' }}>{h.ip}/{h.mask}</div>
                       <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>{h.subnets} subnets</div>
                     </div>
                     <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>{h.time}</div>

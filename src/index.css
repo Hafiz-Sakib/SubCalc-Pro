@@ -2,10 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Operator Mono webfont */
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-XLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-XLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-BookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/OperatorMono-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Ensure dark background at root level */
 html,
 body,
 #root {
   background-color: #080c14;
   min-height: 100%;
+  font-family: "Operator Mono", monospace;
 }

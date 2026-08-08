@@ -106,7 +106,7 @@ function DonutChart({ data, total, size = 240 }) {
           y={cy - 10}
           textAnchor="middle"
           fill="var(--text-primary)"
-          fontFamily="Nunito, sans-serif"
+          fontFamily="Operator Mono, monospace"
           fontWeight={800}
           fontSize={22}
         >
@@ -119,7 +119,7 @@ function DonutChart({ data, total, size = 240 }) {
           y={cy + 14}
           textAnchor="middle"
           fill="var(--text-muted)"
-          fontFamily="Nunito, sans-serif"
+          fontFamily="Operator Mono, monospace"
           fontSize={10}
         >
           {hoveredSlice ? hoveredSlice.label : "Total IPs"}
@@ -130,7 +130,7 @@ function DonutChart({ data, total, size = 240 }) {
             y={cy + 30}
             textAnchor="middle"
             fill={hoveredSlice.color}
-            fontFamily="Nunito, sans-serif"
+            fontFamily="Operator Mono, monospace"
             fontSize={11}
           >
             {(hoveredSlice.fraction * 100).toFixed(1)}%
@@ -367,7 +367,7 @@ export default function SubnetPieChart() {
                   style={{
                     fontSize: 11,
                     color: cat.color,
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontWeight: 700,
                     textTransform: "uppercase",
                     letterSpacing: "0.07em",
@@ -429,7 +429,7 @@ export default function SubnetPieChart() {
             >
               <div
                 style={{
-                  fontFamily: "Nunito, sans-serif",
+                  fontFamily: "Operator Mono, monospace",
                   fontSize: 11,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -486,7 +486,7 @@ export default function SubnetPieChart() {
               <div className="card" style={{ padding: "clamp(16px,4vw,22px)" }}>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -522,7 +522,7 @@ export default function SubnetPieChart() {
                         color: "var(--text-muted)",
                         textTransform: "uppercase",
                         letterSpacing: "0.07em",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       {l}
@@ -531,7 +531,7 @@ export default function SubnetPieChart() {
                       style={{
                         fontSize: 12,
                         color: "var(--text-secondary)",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       {v}
@@ -544,7 +544,7 @@ export default function SubnetPieChart() {
               <div className="card" style={{ padding: "clamp(16px,4vw,22px)" }}>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -575,7 +575,7 @@ export default function SubnetPieChart() {
                             style={{
                               fontSize: 11,
                               color: "var(--text-muted)",
-                              fontFamily: "Nunito, sans-serif",
+                              fontFamily: "Operator Mono, monospace",
                             }}
                           >
                             {d.value} ({pct}%)

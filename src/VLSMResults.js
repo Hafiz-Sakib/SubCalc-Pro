@@ -219,7 +219,7 @@ const VLSMResults = () => {
                     borderRadius: 6,
                     border: "none",
                     cursor: "pointer",
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 12,
                     fontWeight: 600,
                     textTransform: "uppercase",
@@ -337,7 +337,7 @@ const VLSMResults = () => {
                           <td>
                             <span
                               style={{
-                                fontFamily: "Nunito, sans-serif",
+                                fontFamily: "Operator Mono, monospace",
                                 fontSize: 12,
                                 color: "var(--text-secondary)",
                               }}
@@ -369,7 +369,7 @@ const VLSMResults = () => {
                 <div style={{ marginBottom: 20 }}>
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 12,
                       fontWeight: 700,
                       color: "var(--text-muted)",
@@ -472,7 +472,7 @@ const VLSMResults = () => {
                           >
                             <span
                               style={{
-                                fontFamily: "Nunito, sans-serif",
+                                fontFamily: "Operator Mono, monospace",
                                 fontSize: 11,
                                 color: "var(--text-muted)",
                               }}

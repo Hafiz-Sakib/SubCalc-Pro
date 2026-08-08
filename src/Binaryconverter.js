@@ -81,7 +81,7 @@ function BinaryEditor({ value, onChange }) {
             >
               <span
                 style={{
-                  fontFamily: "Nunito, sans-serif",
+                  fontFamily: "Operator Mono, monospace",
                   fontSize: 10,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -93,7 +93,7 @@ function BinaryEditor({ value, onChange }) {
               </span>
               <span
                 style={{
-                  fontFamily: "Nunito, sans-serif",
+                  fontFamily: "Operator Mono, monospace",
                   fontSize: 13,
                   color: "var(--text-secondary)",
                 }}
@@ -127,7 +127,7 @@ function BinaryEditor({ value, onChange }) {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     color: "var(--text-muted)",
                   }}
@@ -365,7 +365,7 @@ export default function BinaryConverter() {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 12,
                     fontWeight: 700,
                     color: "var(--text-secondary)",
@@ -458,7 +458,7 @@ export default function BinaryConverter() {
             >
               <span
                 style={{
-                  fontFamily: "Nunito, sans-serif",
+                  fontFamily: "Operator Mono, monospace",
                   fontSize: 11,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -494,7 +494,7 @@ export default function BinaryConverter() {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     color: "var(--text-muted)",
                     textTransform: "uppercase",
@@ -506,7 +506,7 @@ export default function BinaryConverter() {
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 13,
                       color: color || "var(--text-secondary)",
                       wordBreak: "break-all",

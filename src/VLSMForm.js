@@ -169,7 +169,7 @@ const VLSMForm = () => {
                       const neededMask = h > 0 ? 32 - Math.ceil(Math.log2(h + 2)) : null;
                       return (
                         <div key={index} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                          <div style={{ width: 28, height: 28, borderRadius: 6, background: 'rgba(250,189,47,0.1)', border: '1px solid rgba(250,189,47,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontFamily: 'Nunito, sans-serif', fontWeight: 700, color: 'var(--gold)', flexShrink: 0 }}>
+                          <div style={{ width: 28, height: 28, borderRadius: 6, background: 'rgba(250,189,47,0.1)', border: '1px solid rgba(250,189,47,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontFamily: 'Operator Mono, monospace', fontWeight: 700, color: 'var(--gold)', flexShrink: 0 }}>
                             {index + 1}
                           </div>
                           <input
@@ -217,13 +217,13 @@ const VLSMForm = () => {
           {history.length > 0 && (
             <div className="animate-fadeInUp stagger-2">
               <div style={{ marginBottom: 12 }}>
-                <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent</span>
+                <span style={{ fontFamily: 'Operator Mono, monospace', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Recent</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {history.map((h, i) => (
                   <div key={i} className="history-item" onClick={() => loadHistory(h)}>
                     <div>
-                      <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontFamily: 'Nunito, sans-serif' }}>{h.ip}/{h.mask}</div>
+                      <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontFamily: 'Operator Mono, monospace' }}>{h.ip}/{h.mask}</div>
                       <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>{h.subnets} subnets</div>
                       <div style={{ fontSize: 10, color: 'var(--text-muted)', marginTop: 1 }}>{h.hosts}</div>
                     </div>

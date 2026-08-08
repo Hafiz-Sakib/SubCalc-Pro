@@ -304,7 +304,7 @@ function App() {
                 textDecoration: "none",
                 background: "var(--cyan-dim)",
                 color: "var(--cyan)",
-                fontFamily: "Nunito, sans-serif",
+                fontFamily: "Operator Mono, monospace",
                 fontWeight: 700,
                 fontSize: 13,
                 letterSpacing: "0.08em",

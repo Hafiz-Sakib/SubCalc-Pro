@@ -229,7 +229,7 @@ export default function NetworkSummary() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: 11,
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontWeight: 700,
                     color: "#74b9ff",
                     flexShrink: 0,
@@ -367,7 +367,7 @@ export default function NetworkSummary() {
                 >
                   <span
                     style={{
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontSize: 11,
                       color: "var(--text-muted)",
                       textTransform: "uppercase",
@@ -381,7 +381,7 @@ export default function NetworkSummary() {
                   >
                     <span
                       style={{
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                         fontSize: 13,
                         color: color || "var(--text-secondary)",
                       }}
@@ -412,7 +412,7 @@ export default function NetworkSummary() {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -442,7 +442,7 @@ export default function NetworkSummary() {
                       <td>
                         <span
                           style={{
-                            fontFamily: "Nunito, sans-serif",
+                            fontFamily: "Operator Mono, monospace",
                             fontSize: 13,
                             color: "#74b9ff",
                           }}
@@ -453,7 +453,7 @@ export default function NetworkSummary() {
                       <td>
                         <span
                           style={{
-                            fontFamily: "Nunito, sans-serif",
+                            fontFamily: "Operator Mono, monospace",
                             fontSize: 12,
                           }}
                         >
@@ -463,7 +463,7 @@ export default function NetworkSummary() {
                       <td>
                         <span
                           style={{
-                            fontFamily: "Nunito, sans-serif",
+                            fontFamily: "Operator Mono, monospace",
                             fontSize: 12,
                             color: "#fd79a8",
                           }}

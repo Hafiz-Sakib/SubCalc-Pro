@@ -300,7 +300,7 @@ export default function IPHeatmap() {
                   style={{
                     fontSize: 11,
                     color: "var(--text-muted)",
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontWeight: 700,
                     textTransform: "uppercase",
                     letterSpacing: "0.08em",
@@ -323,7 +323,7 @@ export default function IPHeatmap() {
                         activeType === t.key ? t.color : "var(--text-muted)",
                       cursor: "pointer",
                       fontSize: 11,
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       fontWeight: 600,
                       display: "flex",
                       alignItems: "center",
@@ -436,7 +436,7 @@ export default function IPHeatmap() {
                         fontSize: 9,
                         color: "var(--text-muted)",
                         textAlign: "center",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       .{i}
@@ -453,7 +453,7 @@ export default function IPHeatmap() {
                       background: "rgba(255,255,255,0.04)",
                       borderRadius: 8,
                       fontSize: 12,
-                      fontFamily: "Nunito, sans-serif",
+                      fontFamily: "Operator Mono, monospace",
                       color: "var(--text-secondary)",
                     }}
                   >
@@ -489,7 +489,7 @@ export default function IPHeatmap() {
               <div className="card" style={{ padding: 20 }}>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -520,7 +520,7 @@ export default function IPHeatmap() {
                             style={{
                               fontSize: 11,
                               color: "var(--text-muted)",
-                              fontFamily: "Nunito, sans-serif",
+                              fontFamily: "Operator Mono, monospace",
                             }}
                           >
                             {count} ({pct}%)
@@ -552,7 +552,7 @@ export default function IPHeatmap() {
               <div className="card" style={{ padding: 20 }}>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -590,7 +590,7 @@ export default function IPHeatmap() {
                         color: "var(--text-muted)",
                         textTransform: "uppercase",
                         letterSpacing: "0.07em",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       {label}
@@ -599,7 +599,7 @@ export default function IPHeatmap() {
                       style={{
                         fontSize: 12,
                         color: "var(--text-secondary)",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       {value}

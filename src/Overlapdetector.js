@@ -143,7 +143,7 @@ export default function OverlapDetector() {
           <div style={{ marginBottom: 18 }}>
             <span
               style={{
-                fontFamily: "Nunito, sans-serif",
+                fontFamily: "Operator Mono, monospace",
                 fontSize: 11,
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -179,7 +179,7 @@ export default function OverlapDetector() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: 11,
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontWeight: 700,
                     color: "var(--cyan)",
                     flexShrink: 0,
@@ -239,7 +239,7 @@ export default function OverlapDetector() {
           <div style={{ marginBottom: 8 }}>
             <span
               style={{
-                fontFamily: "Nunito, sans-serif",
+                fontFamily: "Operator Mono, monospace",
                 fontSize: 10,
                 fontWeight: 700,
                 textTransform: "uppercase",
@@ -300,7 +300,7 @@ export default function OverlapDetector() {
               <div>
                 <div
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 16,
                     fontWeight: 700,
                     color: result.hasOverlap ? "#f87171" : "var(--cyan)",
@@ -335,7 +335,7 @@ export default function OverlapDetector() {
               >
                 <span
                   style={{
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -374,7 +374,7 @@ export default function OverlapDetector() {
                       </span>
                       <span
                         style={{
-                          fontFamily: "Nunito, sans-serif",
+                          fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
                           color: isInOverlap ? "#f87171" : "var(--cyan)",
                         }}
@@ -386,7 +386,7 @@ export default function OverlapDetector() {
                       style={{
                         fontSize: 11,
                         color: "var(--text-muted)",
-                        fontFamily: "Nunito, sans-serif",
+                        fontFamily: "Operator Mono, monospace",
                       }}
                     >
                       {intToIP(s.network)} → {intToIP(s.broadcast)}
@@ -408,7 +408,7 @@ export default function OverlapDetector() {
                 <div
                   style={{
                     marginBottom: 14,
-                    fontFamily: "Nunito, sans-serif",
+                    fontFamily: "Operator Mono, monospace",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -436,7 +436,7 @@ export default function OverlapDetector() {
                     >
                       <span
                         style={{
-                          fontFamily: "Nunito, sans-serif",
+                          fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
                           color: "#f87171",
                         }}
@@ -446,7 +446,7 @@ export default function OverlapDetector() {
                       <span style={{ color: "var(--text-muted)" }}>⟺</span>
                       <span
                         style={{
-                          fontFamily: "Nunito, sans-serif",
+                          fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
                           color: "#f87171",
                         }}

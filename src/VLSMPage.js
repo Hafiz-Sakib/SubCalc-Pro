@@ -85,7 +85,7 @@ const VLSMPage = () => {
 
       <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
         <div style={{ width: 48, height: 48, border: '2px solid var(--gold)', borderTopColor: 'transparent', borderRadius: '50%', margin: '0 auto 16px', animation: 'spin 0.8s linear infinite' }} />
-        <p style={{ fontFamily: 'Nunito, sans-serif', fontSize: 13, color: 'var(--text-secondary)' }}>Calculating VLSM allocation...</p>
+        <p style={{ fontFamily: 'Operator Mono, monospace', fontSize: 13, color: 'var(--text-secondary)' }}>Calculating VLSM allocation...</p>
       </div>
 
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
