@@ -192,7 +192,7 @@ const VLSMForm = () => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 fontSize: 11,
-                                fontFamily: "Syne, sans-serif",
+                                fontFamily: "Nunito, sans-serif",
                                 fontWeight: 700,
                                 color: "var(--gold)",
                                 flexShrink: 0,
@@ -257,7 +257,7 @@ const VLSMForm = () => {
             {history.length > 0 && (
               <div className="animate-fadeInUp stagger-2">
                 <div style={{ marginBottom: 12 }}>
-                  <span style={{ fontFamily: "Syne, sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+                  <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>
                     Recent
                   </span>
                 </div>
@@ -265,7 +265,7 @@ const VLSMForm = () => {
                   {history.map((h, i) => (
                     <div key={i} className="history-item" onClick={() => loadHistory(h)}>
                       <div style={{ minWidth: 0 }}>
-                        <div style={{ fontSize: 12, color: "var(--text-secondary)", fontFamily: "DM Mono, monospace", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        <div style={{ fontSize: 12, color: "var(--text-secondary)", fontFamily: "Nunito, sans-serif", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                           {h.ip}/{h.mask}
                         </div>
                         <div style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 2 }}>{h.subnets} subnets</div>

@@ -543,7 +543,7 @@ export default function SubnetQuiz() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 10,
                       fontWeight: 700,
                       textTransform: "uppercase",
@@ -558,7 +558,7 @@ export default function SubnetQuiz() {
                     fontSize: 13,
                     color: "var(--text-primary)",
                     marginBottom: 6,
-                    fontFamily: "Syne, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                     fontWeight: 600,
                   }}
                 >
@@ -655,7 +655,7 @@ export default function SubnetQuiz() {
         >
           <span
             style={{
-              fontFamily: "DM Mono, monospace",
+              fontFamily: "Nunito, sans-serif",
               fontSize: 12,
               color: "var(--text-muted)",
             }}
@@ -665,7 +665,7 @@ export default function SubnetQuiz() {
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <span
               style={{
-                fontFamily: "Syne, sans-serif",
+                fontFamily: "Nunito, sans-serif",
                 fontSize: 11,
                 fontWeight: 700,
                 color: "var(--text-muted)",
@@ -683,7 +683,7 @@ export default function SubnetQuiz() {
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: 12,
-                fontFamily: "DM Mono, monospace",
+                fontFamily: "Nunito, sans-serif",
                 color: timerColor,
                 fontWeight: 700,
               }}
@@ -719,7 +719,7 @@ export default function SubnetQuiz() {
             <span
               style={{
                 fontSize: 10,
-                fontFamily: "Syne, sans-serif",
+                fontFamily: "Nunito, sans-serif",
                 fontWeight: 700,
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",

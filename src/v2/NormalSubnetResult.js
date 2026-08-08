@@ -128,7 +128,7 @@ function NormalSubnetResult() {
                       borderRadius: 6,
                       border: "none",
                       cursor: "pointer",
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 12,
                       fontWeight: 600,
                       textTransform: "uppercase",
@@ -209,8 +209,8 @@ function NormalSubnetResult() {
                               </td>
                               <td><span style={{ color: "var(--text-secondary)" }}>{subnet.subnetMask}</span></td>
                               <td><span style={{ color: "var(--text-secondary)" }}>{subnet.broadcastAddress}</span></td>
-                              <td><span style={{ color: "var(--cyan)", fontFamily: "DM Mono, monospace", fontSize: 13 }}>{subnet.firstHost}</span></td>
-                              <td><span style={{ color: "var(--cyan)", fontFamily: "DM Mono, monospace", fontSize: 13 }}>{subnet.lastHost}</span></td>
+                              <td><span style={{ color: "var(--cyan)", fontFamily: "Nunito, sans-serif", fontSize: 13 }}>{subnet.firstHost}</span></td>
+                              <td><span style={{ color: "var(--cyan)", fontFamily: "Nunito, sans-serif", fontSize: 13 }}>{subnet.lastHost}</span></td>
                               <td><span style={{ color: "var(--text-muted)", fontSize: 12 }}>{subnet.usableHosts}</span></td>
                               <td>
                                 <button
@@ -261,7 +261,7 @@ function NormalSubnetResult() {
                 /* Visual mode */
                 <div className="card" style={{ padding: "clamp(16px, 4vw, 28px)" }}>
                   <div style={{ marginBottom: 16 }}>
-                    <span style={{ fontFamily: "Syne, sans-serif", fontSize: 12, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 12, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                       Address Space Visualization
                     </span>
                   </div>
@@ -274,11 +274,11 @@ function NormalSubnetResult() {
                           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4, gap: 8, flexWrap: "wrap" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                               <div style={{ width: 8, height: 8, borderRadius: 2, background: color, flexShrink: 0 }} />
-                              <span style={{ fontFamily: "DM Mono, monospace", fontSize: "clamp(11px, 2vw, 13px)", color: "var(--text-secondary)", wordBreak: "break-all" }}>
+                              <span style={{ fontFamily: "Nunito, sans-serif", fontSize: "clamp(11px, 2vw, 13px)", color: "var(--text-secondary)", wordBreak: "break-all" }}>
                                 {subnet.networkAddress}/{getSubnetPrefixLength(subnet.subnetMask)}
                               </span>
                             </div>
-                            <span style={{ fontFamily: "DM Mono, monospace", fontSize: 11, color: "var(--text-muted)", flexShrink: 0 }}>
+                            <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 11, color: "var(--text-muted)", flexShrink: 0 }}>
                               {subnet.usableHosts} hosts
                             </span>
                           </div>

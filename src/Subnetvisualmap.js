@@ -127,7 +127,7 @@ function SubnetNode({
           <>
             <div
               style={{
-                fontFamily: "DM Mono, monospace",
+                fontFamily: "Nunito, sans-serif",
                 fontSize: Math.min(11, widthPct * 0.8),
                 color,
                 fontWeight: 600,
@@ -139,7 +139,7 @@ function SubnetNode({
             {widthPct > 16 && (
               <div
                 style={{
-                  fontFamily: "DM Mono, monospace",
+                  fontFamily: "Nunito, sans-serif",
                   fontSize: Math.min(9, widthPct * 0.6),
                   color: "var(--text-muted)",
                   marginTop: 2,
@@ -299,7 +299,7 @@ export default function SubnetVisualMap() {
                         splits === d ? "rgba(6,214,160,0.12)" : "transparent",
                       color: splits === d ? "var(--cyan)" : "var(--text-muted)",
                       cursor: "pointer",
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontWeight: 700,
                       fontSize: 13,
                     }}
@@ -371,7 +371,7 @@ export default function SubnetVisualMap() {
               >
                 <span
                   style={{
-                    fontFamily: "Syne, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -408,7 +408,7 @@ export default function SubnetVisualMap() {
                         top: d * 64 + 14,
                         fontSize: 10,
                         color: "var(--text-muted)",
-                        fontFamily: "DM Mono, monospace",
+                        fontFamily: "Nunito, sans-serif",
                         whiteSpace: "nowrap",
                       }}
                     >
@@ -490,7 +490,7 @@ export default function SubnetVisualMap() {
                 >
                   <span
                     style={{
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 11,
                       fontWeight: 700,
                       textTransform: "uppercase",
@@ -516,7 +516,7 @@ export default function SubnetVisualMap() {
 
                 <div
                   style={{
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                     fontSize: 18,
                     fontWeight: 600,
                     color: "var(--cyan)",
@@ -556,7 +556,7 @@ export default function SubnetVisualMap() {
                         color: "var(--text-muted)",
                         textTransform: "uppercase",
                         letterSpacing: "0.08em",
-                        fontFamily: "DM Mono, monospace",
+                        fontFamily: "Nunito, sans-serif",
                       }}
                     >
                       {label}
@@ -568,7 +568,7 @@ export default function SubnetVisualMap() {
                         style={{
                           fontSize: 12,
                           color: "var(--text-secondary)",
-                          fontFamily: "DM Mono, monospace",
+                          fontFamily: "Nunito, sans-serif",
                         }}
                       >
                         {value}

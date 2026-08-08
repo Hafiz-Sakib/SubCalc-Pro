@@ -136,7 +136,7 @@ const VLSMPage = () => {
             animation: "spin 0.8s linear infinite",
           }}
         />
-        <p style={{ fontFamily: "DM Mono, monospace", fontSize: 13, color: "var(--text-secondary)" }}>
+        <p style={{ fontFamily: "Nunito, sans-serif", fontSize: 13, color: "var(--text-secondary)" }}>
           Calculating VLSM allocation...
         </p>
       </div>

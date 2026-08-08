@@ -369,7 +369,7 @@ export default function SubnetComparison() {
             >
               <div
                 style={{
-                  fontFamily: "Syne, sans-serif",
+                  fontFamily: "Nunito, sans-serif",
                   fontSize: 11,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -398,7 +398,7 @@ export default function SubnetComparison() {
                       >
                         <span
                           style={{
-                            fontFamily: "DM Mono, monospace",
+                            fontFamily: "Nunito, sans-serif",
                             fontSize: 12,
                             color: COLORS[i % COLORS.length],
                           }}
@@ -407,7 +407,7 @@ export default function SubnetComparison() {
                         </span>
                         <span
                           style={{
-                            fontFamily: "DM Mono, monospace",
+                            fontFamily: "Nunito, sans-serif",
                             fontSize: 12,
                             color: "var(--text-muted)",
                           }}
@@ -442,7 +442,7 @@ export default function SubnetComparison() {
                             alignItems: "center",
                             paddingLeft: 10,
                             fontSize: 11,
-                            fontFamily: "DM Mono, monospace",
+                            fontFamily: "Nunito, sans-serif",
                             color: "var(--text-muted)",
                           }}
                         >
@@ -521,7 +521,7 @@ export default function SubnetComparison() {
                             >
                               <span
                                 style={{
-                                  fontFamily: "DM Mono, monospace",
+                                  fontFamily: "Nunito, sans-serif",
                                   fontSize: 13,
                                   color: COLORS[origIdx % COLORS.length],
                                 }}
@@ -542,7 +542,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 12,
                               }}
                             >
@@ -552,7 +552,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 12,
                                 color: "#fd79a8",
                               }}
@@ -563,7 +563,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 12,
                                 color: "var(--cyan)",
                               }}
@@ -574,7 +574,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 12,
                                 color: "var(--cyan)",
                               }}
@@ -586,7 +586,7 @@ export default function SubnetComparison() {
                             <div>
                               <div
                                 style={{
-                                  fontFamily: "DM Mono, monospace",
+                                  fontFamily: "Nunito, sans-serif",
                                   fontSize: 12,
                                 }}
                               >
@@ -602,7 +602,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 12,
                               }}
                             >
@@ -612,7 +612,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 11,
                                 color: "var(--text-muted)",
                               }}
@@ -623,7 +623,7 @@ export default function SubnetComparison() {
                           <td>
                             <span
                               style={{
-                                fontFamily: "DM Mono, monospace",
+                                fontFamily: "Nunito, sans-serif",
                                 fontSize: 11,
                                 color: "var(--orange)",
                               }}

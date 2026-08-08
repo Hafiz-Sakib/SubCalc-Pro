@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* ─── CSS Variables ────────────────────────────────────────────────── */
 :root {
@@ -40,14 +40,14 @@
 body {
   background-color: var(--bg-deep);
   color: var(--text-primary);
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* ─── Background ───────────────────────────────────────────────────── */
@@ -93,7 +93,7 @@ h4 {
   border-radius: var(--radius-sm);
   padding: 12px 16px;
   color: var(--text-primary);
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   transition:
     border-color 0.2s,
@@ -117,7 +117,7 @@ h4 {
 
 .field-label {
   display: block;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -130,7 +130,7 @@ h4 {
 .btn-primary {
   background: var(--gold);
   color: #0a0c10;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -154,7 +154,7 @@ h4 {
 .btn-secondary {
   background: transparent;
   color: var(--text-secondary);
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -175,7 +175,7 @@ h4 {
 .btn-cyan {
   background: var(--cyan);
   color: #0a0c10;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -197,7 +197,7 @@ h4 {
   border-collapse: collapse;
 }
 .result-table thead th {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -216,7 +216,7 @@ h4 {
 }
 .result-table tbody td {
   padding: 14px 16px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
 }
@@ -228,7 +228,7 @@ h4 {
   gap: 6px;
   padding: 4px 10px;
   border-radius: 20px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 500;
 }
@@ -280,7 +280,7 @@ h4 {
   transition:
     color 0.2s,
     background 0.2s;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   min-width: 28px;
   min-height: 28px;
 }
@@ -383,7 +383,7 @@ h4 {
   border-radius: 4px;
   font-size: 11px;
   color: var(--text-muted);
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
   transition: all 0.15s;
 }
@@ -417,7 +417,7 @@ h4 {
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-sm);
   padding: 12px 20px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   color: var(--gold);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -450,7 +450,7 @@ h4 {
 }
 
 .nav-logo {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 18px;
   color: var(--text-primary);
@@ -475,7 +475,7 @@ h4 {
 .nav-link {
   padding: 7px 12px;
   border-radius: var(--radius-sm);
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -501,7 +501,7 @@ h4 {
 .nav-more-btn {
   padding: 7px 12px;
   border-radius: var(--radius-sm);
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -536,7 +536,7 @@ h4 {
   display: block;
   padding: 9px 14px;
   border-radius: 6px;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -651,7 +651,7 @@ h4 {
   justify-content: space-between;
   padding: 13px 16px;
   border-radius: var(--radius-sm);
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -675,7 +675,7 @@ h4 {
 
 /* ─── IP display ───────────────────────────────────────────────────── */
 .ip-display {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 15px;
   color: var(--cyan);
   font-weight: 500;
@@ -683,7 +683,7 @@ h4 {
 
 /* ─── Section tag ──────────────────────────────────────────────────── */
 .section-tag {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -742,13 +742,13 @@ h4 {
   padding: 16px;
 }
 .stat-value {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 800;
   color: var(--text-primary);
 }
 .stat-label {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -760,7 +760,7 @@ h4 {
 .app-footer {
   text-align: center;
   padding: 24px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   color: var(--text-muted);
   border-top: 1px solid var(--border-subtle);
@@ -781,7 +781,7 @@ h4 {
   border: 1px solid rgba(239, 68, 68, 0.2);
   border-radius: var(--radius-sm);
   padding: 12px 16px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   color: #f87171;
 }
@@ -854,13 +854,13 @@ h4 {
   font-size: 18px;
 }
 .tool-card-title {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
 }
 .tool-card-desc {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   color: var(--text-muted);
   line-height: 1.6;
@@ -887,7 +887,7 @@ h4 {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 500;
   transition: all 0.15s;
@@ -910,7 +910,7 @@ h4 {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   background: rgba(255, 255, 255, 0.02);
@@ -959,7 +959,7 @@ h4 {
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 10px;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1016,7 +1016,7 @@ h4 {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1055,14 +1055,14 @@ h4 {
   border-bottom: none;
 }
 .mobile-card-key {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 .mobile-card-val {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   color: var(--text-secondary);
   text-align: right;
@@ -1078,7 +1078,7 @@ h4 {
   border-radius: var(--radius-sm);
   padding: 12px 16px;
   color: var(--text-primary);
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 14px;
   outline: none;
   cursor: pointer;

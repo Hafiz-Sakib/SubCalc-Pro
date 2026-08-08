@@ -310,7 +310,7 @@ export default function CIDRRange() {
                 >
                   <span
                     style={{
-                      fontFamily: "DM Mono, monospace",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 11,
                       color: "var(--text-muted)",
                       textTransform: "uppercase",
@@ -324,7 +324,7 @@ export default function CIDRRange() {
                   >
                     <span
                       style={{
-                        fontFamily: "DM Mono, monospace",
+                        fontFamily: "Nunito, sans-serif",
                         fontSize: 13,
                         color: color || "var(--text-secondary)",
                       }}
@@ -347,7 +347,7 @@ export default function CIDRRange() {
               <div style={{ marginBottom: 12 }}>
                 <span
                   style={{
-                    fontFamily: "Syne, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -376,7 +376,7 @@ export default function CIDRRange() {
                     justifyContent: "center",
                     fontSize: 10,
                     color: "var(--text-muted)",
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                   }}
                 >
                   Network
@@ -391,7 +391,7 @@ export default function CIDRRange() {
                     justifyContent: "center",
                     fontSize: 10,
                     color: "var(--gold)",
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                   }}
                 >
                   {result.usableHosts} hosts
@@ -405,7 +405,7 @@ export default function CIDRRange() {
                     justifyContent: "center",
                     fontSize: 10,
                     color: "#fd79a8",
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                   }}
                 >
                   Broadcast
@@ -418,7 +418,7 @@ export default function CIDRRange() {
                   marginTop: 6,
                   fontSize: 10,
                   color: "var(--text-muted)",
-                  fontFamily: "DM Mono, monospace",
+                  fontFamily: "Nunito, sans-serif",
                 }}
               >
                 <span>{result.network}</span>

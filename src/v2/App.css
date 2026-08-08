@@ -10,7 +10,7 @@
    ============================================================ */
 
 /* ---------- Google Fonts ---------- */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* ---------- CSS Variables ---------- */
 :root {
@@ -61,7 +61,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   background: var(--bg-deep);
   color: var(--text-primary);
   min-height: 100dvh;
@@ -122,7 +122,7 @@ body {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: clamp(14px, 3.5vw, 17px);
   color: var(--text-primary);
@@ -148,7 +148,7 @@ body {
 }
 
 .nav-link {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: clamp(10px, 2vw, 12px);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -211,7 +211,7 @@ body {
 
 /* ---------- Buttons ---------- */
 .btn-primary {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: clamp(11px, 2vw, 13px);
   letter-spacing: 0.08em;
@@ -244,7 +244,7 @@ body {
 }
 
 .btn-secondary {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: clamp(11px, 2vw, 13px);
   letter-spacing: 0.08em;
@@ -277,7 +277,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -292,7 +292,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 13px 16px;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 16px; /* Prevent iOS zoom on all devices */
   color: var(--text-primary);
   transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
@@ -366,7 +366,7 @@ body {
 .section-tag {
   display: inline-flex;
   align-items: center;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -380,7 +380,7 @@ body {
 
 .badge {
   display: inline-block;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -403,7 +403,7 @@ body {
 
 .chip {
   display: inline-block;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   color: var(--cyan);
   background: var(--cyan-dim);
@@ -452,7 +452,7 @@ body {
 }
 
 .stat-value {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: clamp(18px, 3vw, 24px);
   color: var(--text-primary);
@@ -461,7 +461,7 @@ body {
 }
 
 .stat-label {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -471,7 +471,7 @@ body {
 
 /* ---------- IP Display ---------- */
 .ip-display {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: clamp(11px, 2vw, 14px);
   color: var(--text-primary);
   word-break: break-all;
@@ -489,7 +489,7 @@ body {
 .result-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   min-width: 560px;
 }
@@ -502,7 +502,7 @@ body {
 
 .results-table th,
 .result-table th {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -554,7 +554,7 @@ body {
 }
 
 .mobile-card-key {
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -565,7 +565,7 @@ body {
 }
 
 .mobile-card-val {
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   color: var(--text-primary);
   text-align: right;
@@ -586,7 +586,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text-muted);
-  font-family: "DM Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 11px;
   padding: 5px 12px;
   cursor: pointer;
@@ -615,7 +615,7 @@ body {
   border: 1px solid var(--gold-border);
   border-radius: var(--radius-md);
   padding: 10px 22px;
-  font-family: "Syne", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: var(--gold);

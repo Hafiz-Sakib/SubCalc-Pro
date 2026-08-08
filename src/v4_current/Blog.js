@@ -880,7 +880,7 @@ export default function Blog() {
                   style={{
                     fontSize: 11,
                     color: "var(--text-muted)",
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                   }}
                 >
                   {article.readTime}
@@ -922,7 +922,7 @@ export default function Blog() {
                   style={{
                     fontSize: 12,
                     color: "var(--gold)",
-                    fontFamily: "Syne, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                     fontWeight: 700,
                   }}
                 >

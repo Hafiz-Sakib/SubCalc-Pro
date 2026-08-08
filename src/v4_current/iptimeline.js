@@ -130,7 +130,7 @@ function LineChart({ series, months, width = 600, height = 280 }) {
               textAnchor="end"
               fill="var(--text-muted)"
               fontSize={9}
-              fontFamily="DM Mono, monospace"
+              fontFamily="Nunito, sans-serif"
             >
               {v}%
             </text>
@@ -149,7 +149,7 @@ function LineChart({ series, months, width = 600, height = 280 }) {
                 textAnchor="middle"
                 fill="var(--text-muted)"
                 fontSize={9}
-                fontFamily="DM Mono, monospace"
+                fontFamily="Nunito, sans-serif"
               >
                 {MONTHS[i % 12]}
               </text>
@@ -226,7 +226,7 @@ function LineChart({ series, months, width = 600, height = 280 }) {
               fontSize: 10,
               color: "var(--text-muted)",
               marginBottom: 6,
-              fontFamily: "DM Mono, monospace",
+              fontFamily: "Nunito, sans-serif",
             }}
           >
             {MONTHS[hovered.idx % 12]}
@@ -259,7 +259,7 @@ function LineChart({ series, months, width = 600, height = 280 }) {
                 style={{
                   fontSize: 10,
                   color: s.color,
-                  fontFamily: "DM Mono, monospace",
+                  fontFamily: "Nunito, sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -644,7 +644,7 @@ export default function IPTimeline() {
             >
               <div
                 style={{
-                  fontFamily: "Syne, sans-serif",
+                  fontFamily: "Nunito, sans-serif",
                   fontSize: 11,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -672,7 +672,7 @@ export default function IPTimeline() {
             >
               <div
                 style={{
-                  fontFamily: "Syne, sans-serif",
+                  fontFamily: "Nunito, sans-serif",
                   fontSize: 11,
                   fontWeight: 700,
                   textTransform: "uppercase",
@@ -689,7 +689,7 @@ export default function IPTimeline() {
                     width: "100%",
                     borderCollapse: "collapse",
                     fontSize: 12,
-                    fontFamily: "DM Mono, monospace",
+                    fontFamily: "Nunito, sans-serif",
                   }}
                 >
                   <thead>
@@ -815,7 +815,7 @@ export default function IPTimeline() {
                                 borderRadius: 4,
                                 fontSize: 10,
                                 fontWeight: 700,
-                                fontFamily: "Syne, sans-serif",
+                                fontFamily: "Nunito, sans-serif",
                                 textTransform: "uppercase",
                               }}
                             >

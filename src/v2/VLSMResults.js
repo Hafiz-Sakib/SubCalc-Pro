@@ -124,7 +124,7 @@ const VLSMResults = () => {
                       borderRadius: 6,
                       border: "none",
                       cursor: "pointer",
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 12,
                       fontWeight: 600,
                       textTransform: "uppercase",
@@ -206,7 +206,7 @@ const VLSMResults = () => {
                               <td><span style={{ color: "var(--text-muted)", fontSize: 12 }}>{result.wildcardMask}</span></td>
                               <td><span style={{ color: "var(--text-secondary)" }}>{result.broadcastAddress}</span></td>
                               <td>
-                                <span style={{ fontFamily: "DM Mono, monospace", fontSize: 12, color: "var(--text-secondary)" }}>
+                                <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 12, color: "var(--text-secondary)" }}>
                                   {result.usableRange}
                                 </span>
                               </td>
@@ -258,7 +258,7 @@ const VLSMResults = () => {
                 /* Visual proportional block view */
                 <div className="card" style={{ padding: "clamp(16px, 4vw, 28px)" }}>
                   <div style={{ marginBottom: 20 }}>
-                    <span style={{ fontFamily: "Syne, sans-serif", fontSize: 12, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 12, fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                       Address Space — Proportional Allocation
                     </span>
                   </div>
@@ -302,7 +302,7 @@ const VLSMResults = () => {
                               </span>
                             </div>
                             <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
-                              <span style={{ fontFamily: "DM Mono, monospace", fontSize: 11, color: "var(--text-muted)" }}>
+                              <span style={{ fontFamily: "Nunito, sans-serif", fontSize: 11, color: "var(--text-muted)" }}>
                                 {r.requiredHosts} / {usable}
                               </span>
                               <span

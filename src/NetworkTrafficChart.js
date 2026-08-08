@@ -72,7 +72,7 @@ function BarChart({ subnets, metric }) {
                 style={{
                   fontSize: 9,
                   color: "var(--text-muted)",
-                  fontFamily: "DM Mono, monospace",
+                  fontFamily: "Nunito, sans-serif",
                   lineHeight: 1,
                 }}
               >
@@ -145,7 +145,7 @@ function BarChart({ subnets, metric }) {
                         style={{
                           fontSize: 11,
                           color: "var(--text-secondary)",
-                          fontFamily: "DM Mono, monospace",
+                          fontFamily: "Nunito, sans-serif",
                         }}
                       >
                         {s.subnet}
@@ -154,7 +154,7 @@ function BarChart({ subnets, metric }) {
                         style={{
                           fontSize: 13,
                           color: s.color,
-                          fontFamily: "Syne, sans-serif",
+                          fontFamily: "Nunito, sans-serif",
                           fontWeight: 700,
                           marginTop: 2,
                         }}
@@ -181,7 +181,7 @@ function BarChart({ subnets, metric }) {
                     style={{
                       fontSize: 8,
                       color: "var(--text-muted)",
-                      fontFamily: "DM Mono, monospace",
+                      fontFamily: "Nunito, sans-serif",
                       marginTop: 4,
                       textAlign: "center",
                       width: "100%",
@@ -281,7 +281,7 @@ function ProtocolChart({ data }) {
               style={{
                 fontSize: 10,
                 color: d.color,
-                fontFamily: "DM Mono, monospace",
+                fontFamily: "Nunito, sans-serif",
               }}
             >
               {d.value}%
@@ -588,7 +588,7 @@ export default function NetworkTrafficChart() {
                         fontSize: "clamp(18px,3vw,24px)",
                         fontWeight: 800,
                         color,
-                        fontFamily: "Syne, sans-serif",
+                        fontFamily: "Nunito, sans-serif",
                       }}
                     >
                       {value}
@@ -626,7 +626,7 @@ export default function NetworkTrafficChart() {
               >
                 <div
                   style={{
-                    fontFamily: "Syne, sans-serif",
+                    fontFamily: "Nunito, sans-serif",
                     fontSize: 11,
                     fontWeight: 700,
                     textTransform: "uppercase",
@@ -709,7 +709,7 @@ export default function NetworkTrafficChart() {
                   >
                     <div
                       style={{
-                        fontFamily: "Syne, sans-serif",
+                        fontFamily: "Nunito, sans-serif",
                         fontWeight: 700,
                         fontSize: 13,
                         color: s.color,
@@ -721,7 +721,7 @@ export default function NetworkTrafficChart() {
                       style={{
                         fontSize: 10,
                         color: "var(--text-muted)",
-                        fontFamily: "DM Mono, monospace",
+                        fontFamily: "Nunito, sans-serif",
                       }}
                     >
                       {s.subnet}
@@ -763,7 +763,7 @@ export default function NetworkTrafficChart() {
                           style={{
                             fontSize: 12,
                             color: "var(--text-secondary)",
-                            fontFamily: "DM Mono, monospace",
+                            fontFamily: "Nunito, sans-serif",
                             marginTop: 2,
                           }}
                         >

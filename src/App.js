@@ -304,7 +304,7 @@ function App() {
                 textDecoration: "none",
                 background: "var(--cyan-dim)",
                 color: "var(--cyan)",
-                fontFamily: "Syne, sans-serif",
+                fontFamily: "Nunito, sans-serif",
                 fontWeight: 700,
                 fontSize: 13,
                 letterSpacing: "0.08em",

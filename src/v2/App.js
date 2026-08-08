@@ -71,7 +71,7 @@ function App() {
                 fontWeight: 800,
                 lineHeight: 1.05,
                 marginBottom: 16,
-                fontFamily: "Syne, sans-serif",
+                fontFamily: "Nunito, sans-serif",
               }}
             >
               Subnet
@@ -140,7 +140,7 @@ function App() {
                   </svg>
                 </div>
                 <span className="badge badge-gold" style={{ marginBottom: 10 }}>FLSM</span>
-                <h2 style={{ fontSize: "clamp(18px, 3.5vw, 24px)", fontWeight: 800, marginBottom: 8, fontFamily: "Syne, sans-serif" }}>
+                <h2 style={{ fontSize: "clamp(18px, 3.5vw, 24px)", fontWeight: 800, marginBottom: 8, fontFamily: "Nunito, sans-serif" }}>
                   Fixed Length
                 </h2>
                 <p style={{ fontSize: "clamp(12px, 1.8vw, 13px)", color: "var(--text-secondary)", lineHeight: 1.7 }}>
@@ -198,7 +198,7 @@ function App() {
                   </svg>
                 </div>
                 <span className="badge badge-cyan" style={{ marginBottom: 10 }}>VLSM</span>
-                <h2 style={{ fontSize: "clamp(18px, 3.5vw, 24px)", fontWeight: 800, marginBottom: 8, fontFamily: "Syne, sans-serif" }}>
+                <h2 style={{ fontSize: "clamp(18px, 3.5vw, 24px)", fontWeight: 800, marginBottom: 8, fontFamily: "Nunito, sans-serif" }}>
                   Variable Length
                 </h2>
                 <p style={{ fontSize: "clamp(12px, 1.8vw, 13px)", color: "var(--text-secondary)", lineHeight: 1.7 }}>

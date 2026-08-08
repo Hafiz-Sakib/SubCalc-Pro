@@ -89,7 +89,7 @@ function NormalSubnetResult() {
             {/* View toggle */}
             <div style={{ display: 'flex', gap: 4, background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: 4, border: '1px solid var(--border-subtle)' }}>
               {['table', 'visual'].map(m => (
-                <button key={m} onClick={() => setViewMode(m)} style={{ padding: '6px 14px', borderRadius: 6, border: 'none', cursor: 'pointer', fontFamily: 'Syne, sans-serif', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', background: viewMode === m ? 'var(--gold)' : 'transparent', color: viewMode === m ? '#0a0c10' : 'var(--text-muted)', transition: 'all 0.2s' }}>
+                <button key={m} onClick={() => setViewMode(m)} style={{ padding: '6px 14px', borderRadius: 6, border: 'none', cursor: 'pointer', fontFamily: 'Nunito, sans-serif', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', background: viewMode === m ? 'var(--gold)' : 'transparent', color: viewMode === m ? '#0a0c10' : 'var(--text-muted)', transition: 'all 0.2s' }}>
                   {m}
                 </button>
               ))}
@@ -144,8 +144,8 @@ function NormalSubnetResult() {
                             <td><span className="ip-display">{subnet.networkAddress}/{getSubnetPrefixLength(subnet.subnetMask)}</span></td>
                             <td><span style={{ color: 'var(--text-secondary)' }}>{subnet.subnetMask}</span></td>
                             <td><span style={{ color: 'var(--text-secondary)' }}>{subnet.broadcastAddress}</span></td>
-                            <td><span style={{ color: 'var(--cyan)', fontFamily: 'DM Mono, monospace', fontSize: 13 }}>{subnet.firstHost}</span></td>
-                            <td><span style={{ color: 'var(--cyan)', fontFamily: 'DM Mono, monospace', fontSize: 13 }}>{subnet.lastHost}</span></td>
+                            <td><span style={{ color: 'var(--cyan)', fontFamily: 'Nunito, sans-serif', fontSize: 13 }}>{subnet.firstHost}</span></td>
+                            <td><span style={{ color: 'var(--cyan)', fontFamily: 'Nunito, sans-serif', fontSize: 13 }}>{subnet.lastHost}</span></td>
                             <td><span style={{ color: 'var(--text-muted)', fontSize: 12 }}>{subnet.usableHosts}</span></td>
                             <td>
                               <button className="copy-btn" onClick={() => copyToClipboard(`${subnet.networkAddress}/${getSubnetPrefixLength(subnet.subnetMask)}`)}>⎘</button>
@@ -186,7 +186,7 @@ function NormalSubnetResult() {
               /* Visual mode */
               <div className="card" style={{ padding: 28 }}>
                 <div style={{ marginBottom: 16 }}>
-                  <span style={{ fontFamily: 'Syne, sans-serif', fontSize: 12, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Address Space Visualization</span>
+                  <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 12, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Address Space Visualization</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {subnets.map((subnet, index) => {
@@ -197,9 +197,9 @@ function NormalSubnetResult() {
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                             <div style={{ width: 8, height: 8, borderRadius: 2, background: color, flexShrink: 0 }} />
-                            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 13, color: 'var(--text-secondary)' }}>{subnet.networkAddress}/{getSubnetPrefixLength(subnet.subnetMask)}</span>
+                            <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 13, color: 'var(--text-secondary)' }}>{subnet.networkAddress}/{getSubnetPrefixLength(subnet.subnetMask)}</span>
                           </div>
-                          <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: 'var(--text-muted)' }}>{subnet.usableHosts} hosts</span>
+                          <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, color: 'var(--text-muted)' }}>{subnet.usableHosts} hosts</span>
                         </div>
                         <div className="subnet-bar">
                           <div className="subnet-bar-fill" style={{ width: `${100 / subnets.length}%`, background: `linear-gradient(90deg, ${color}99, ${color}44)` }} />

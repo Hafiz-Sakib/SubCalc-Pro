@@ -291,7 +291,7 @@ function NormalSubnetForm() {
                 <div style={{ marginBottom: 12 }}>
                   <span
                     style={{
-                      fontFamily: "Syne, sans-serif",
+                      fontFamily: "Nunito, sans-serif",
                       fontSize: 11,
                       fontWeight: 700,
                       letterSpacing: "0.1em",
@@ -316,7 +316,7 @@ function NormalSubnetForm() {
                           style={{
                             fontSize: 12,
                             color: "var(--text-secondary)",
-                            fontFamily: "DM Mono, monospace",
+                            fontFamily: "Nunito, sans-serif",
                           }}
                         >
                           {h.ip}/{h.mask}
