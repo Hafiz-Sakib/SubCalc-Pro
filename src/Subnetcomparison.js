@@ -152,8 +152,8 @@ export default function SubnetComparison() {
     setResults(null);
   };
 
-  const compare = () => {
-    const errs = inputs
+  const compare = (inputsVal = inputs) => {
+    const errs = inputsVal
       .map((v, i) =>
         !v.trim()
           ? `Row ${i + 1}: empty`
@@ -164,7 +164,17 @@ export default function SubnetComparison() {
       .filter(Boolean);
     setErrors(errs);
     if (errs.length) return;
-    setResults(inputs.map(analyzeCIDR));
+    setResults(inputsVal.map(analyzeCIDR));
+  };
+
+  const EXAMPLES = [
+    { label: "Class ranges", nets: ["10.0.0.0/8", "172.16.0.0/16", "192.168.0.0/24", "10.0.0.0/30"] },
+    { label: "Office subnets", nets: ["192.168.1.0/26", "192.168.1.64/27", "192.168.1.96/28"] },
+    { label: "Datacenter blocks", nets: ["10.10.0.0/22", "10.10.4.0/23", "10.10.8.0/24"] },
+  ];
+  const runExample = (ex) => {
+    setInputs(ex.nets);
+    compare(ex.nets);
   };
 
   const sortedResults = results
@@ -241,6 +251,12 @@ export default function SubnetComparison() {
             Compare multiple CIDR blocks side by side with sortable columns, bar
             charts, and CSV export.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         {/* Input */}
@@ -311,7 +327,7 @@ export default function SubnetComparison() {
           >
             <button
               className="btn-primary"
-              onClick={compare}
+              onClick={() => compare()}
               style={{ background: "var(--purple)", color: "#fff" }}
             >
               Compare

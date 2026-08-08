@@ -354,13 +354,13 @@ export default function NetworkTrafficChart() {
   const [live, setLive] = useState(false);
   const [tick, setTick] = useState(0);
   console.log(tick);
-  const generate = () => {
+  const generate = (cidrVal = cidr, numSubnetsVal = numSubnets) => {
     setError("");
-    if (!isValidCIDR(cidr)) {
+    if (!isValidCIDR(cidrVal)) {
       setError("Enter a valid CIDR between /16 and /28.");
       return;
     }
-    const result = generateSubnetTraffic(cidr, numSubnets);
+    const result = generateSubnetTraffic(cidrVal, numSubnetsVal);
     if (!result.length) {
       setError(
         "Cannot subdivide: prefix too deep. Try a larger block or fewer subnets.",
@@ -445,6 +445,27 @@ export default function NetworkTrafficChart() {
             Visualize bandwidth usage, utilization rates, and protocol
             distribution across subnets.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {[
+              { label: "10.0.0.0/20 → 4 subnets", cidr: "10.0.0.0/20", n: 4 },
+              { label: "192.168.0.0/22 → 6 subnets", cidr: "192.168.0.0/22", n: 6 },
+              { label: "172.16.0.0/18 → 8 subnets", cidr: "172.16.0.0/18", n: 8 },
+            ].map((ex, i) => (
+              <button
+                key={i}
+                type="button"
+                className="chip"
+                onClick={() => {
+                  setCidr(ex.cidr);
+                  setNumSubnets(ex.n);
+                  generate(ex.cidr, ex.n);
+                }}
+              >
+                {ex.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Controls */}
@@ -505,7 +526,7 @@ export default function NetworkTrafficChart() {
             </div>
             <button
               className="btn-primary"
-              onClick={generate}
+              onClick={() => generate()}
               style={{ background: "#8ec5ff", color: "#0a0c10" }}
             >
               Analyze

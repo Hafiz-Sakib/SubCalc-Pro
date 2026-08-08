@@ -58,9 +58,9 @@ export default function OverlapDetector() {
     if (subnets.length > 2) setSubnets(subnets.filter((_, idx) => idx !== i));
   };
 
-  const detect = () => {
+  const detect = (subnetsVal = subnets) => {
     const errs = [];
-    const parsed = subnets.map((s, i) => {
+    const parsed = subnetsVal.map((s, i) => {
       if (!s.trim()) {
         errs.push(`Subnet ${i + 1}: empty`);
         return null;
@@ -231,7 +231,7 @@ export default function OverlapDetector() {
                 + Add Subnet
               </button>
             )}
-            <button className="btn-cyan" onClick={detect}>
+            <button className="btn-cyan" onClick={() => detect()}>
               Detect Overlaps
             </button>
           </div>
@@ -260,6 +260,7 @@ export default function OverlapDetector() {
                   setSubnets(p);
                   setResult(null);
                   setErrors([]);
+                  detect(p);
                 }}
               >
                 Preset {i + 1}

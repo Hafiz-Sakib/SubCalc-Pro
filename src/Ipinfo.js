@@ -169,18 +169,31 @@ export default function IPInfo() {
     setResult(null);
   };
 
-  const analyze = () => {
-    if (!isValidIP(ip)) return;
-    const cls = getIPClass(ip);
-    const types = getIPType(ip);
+  const analyzeValue = (val) => {
+    if (!isValidIP(val)) return;
+    const cls = getIPClass(val);
+    const types = getIPType(val);
     setResult({
-      ip,
+      ip: val,
       cls,
       types,
-      binary: toBinary(ip),
-      hex: toHex(ip),
-      integer: ipToInt(ip),
+      binary: toBinary(val),
+      hex: toHex(val),
+      integer: ipToInt(val),
     });
+  };
+
+  const analyze = () => analyzeValue(ip);
+
+  const EXAMPLES = [
+    { label: "8.8.8.8 (Public)", ip: "8.8.8.8" },
+    { label: "192.168.1.1 (Private)", ip: "192.168.1.1" },
+    { label: "127.0.0.1 (Loopback)", ip: "127.0.0.1" },
+  ];
+  const runExample = (ex) => {
+    setIp(ex.ip);
+    setIpValid(true);
+    analyzeValue(ex.ip);
   };
 
   const copy = (text) =>
@@ -227,6 +240,12 @@ export default function IPInfo() {
             Deep-dive into any IPv4 address — class, type, binary
             representation, RFC classification.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         <div

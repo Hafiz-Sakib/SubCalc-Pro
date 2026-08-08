@@ -64,23 +64,27 @@ const VLSMForm = () => {
     setHostRequirements(updated);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const runCalculation = (baseIPVal, maskVal, hostReqVal, numSubnetsVal) => {
     setError("");
-    if (!isValidIP(baseIP)) { setError("Invalid IP address format."); return; }
-    const maskInt = parseInt(originalMask);
+    if (!isValidIP(baseIPVal)) { setError("Invalid IP address format."); return; }
+    const maskInt = parseInt(maskVal);
     if (maskInt < 0 || maskInt > 32) { setError("Subnet mask must be between 0 and 32."); return; }
-    const hostsArr = hostRequirements.map(Number);
+    const hostsArr = hostReqVal.map(Number);
     if (hostsArr.some(h => isNaN(h) || h < 1)) { setError("All host requirements must be positive numbers."); return; }
 
-    const formData = { baseIP, originalMask, hostRequirements: hostsArr };
+    const formData = { baseIP: baseIPVal, originalMask: maskVal, hostRequirements: hostsArr };
 
-    const entry = { ip: baseIP, mask: originalMask, subnets: numSubnets, hosts: hostsArr.join(', '), time: new Date().toLocaleTimeString() };
+    const entry = { ip: baseIPVal, mask: maskVal, subnets: numSubnetsVal, hosts: hostsArr.join(', '), time: new Date().toLocaleTimeString() };
     const newHistory = [entry, ...history].slice(0, 5);
     setHistory(newHistory);
     localStorage.setItem("vlsm_history", JSON.stringify(newHistory));
 
     navigate("/vlsm-page", { state: formData });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    runCalculation(baseIP, originalMask, hostRequirements, numSubnets);
   };
 
   const loadHistory = (entry) => {
@@ -92,6 +96,19 @@ const VLSMForm = () => {
   };
 
   const numSubnetsInt = parseInt(numSubnets) || 0;
+
+  const EXAMPLES = [
+    { label: "10.0.0.0/16 → 50,20,10", ip: "10.0.0.0", mask: "16", hosts: ["50", "20", "10"] },
+    { label: "192.168.0.0/24 → 100,50,25,10", ip: "192.168.0.0", mask: "24", hosts: ["100", "50", "25", "10"] },
+    { label: "172.20.0.0/20 → 500,200,60", ip: "172.20.0.0", mask: "20", hosts: ["500", "200", "60"] },
+  ];
+  const runExample = (ex) => {
+    setBaseIP(ex.ip);
+    setOriginalMask(ex.mask);
+    setNumSubnets(String(ex.hosts.length));
+    setHostRequirements(ex.hosts);
+    runCalculation(ex.ip, ex.mask, ex.hosts, String(ex.hosts.length));
+  };
 
   return (
     <div className="page-wrapper" style={{ background: 'var(--bg-deep)', minHeight: '100vh' }}>
@@ -105,6 +122,12 @@ const VLSMForm = () => {
           <div className="section-tag">Variable Length Subnet Masking</div>
           <h1 style={{ fontSize: 36, fontWeight: 800, marginBottom: 8 }}>VLSM Calculator</h1>
           <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>Allocate subnets based on individual host requirements for efficient address space use.</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 14, alignItems: 'center' }}>
+            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         <div className={history.length > 0 ? 'form-history-grid' : ''}>

@@ -284,11 +284,23 @@ export default function IPTimeline() {
   const [mode, setMode] = useState("auto");
   const [error, setError] = useState("");
 
-  const generate = () => {
-    const s = generateTimeline(numSubnets, months);
+  const generate = (numSubnetsVal = numSubnets, monthsVal = months) => {
+    const s = generateTimeline(numSubnetsVal, monthsVal);
     setSeries(s);
     setGenerated(true);
     setError("");
+  };
+
+  const EXAMPLES = [
+    { label: "3 subnets · 12 months", n: 3, m: 12 },
+    { label: "5 subnets · 6 months", n: 5, m: 6 },
+    { label: "2 subnets · 24 months", n: 2, m: 24 },
+  ];
+  const runExample = (ex) => {
+    setMode("auto");
+    setNumSubnets(ex.n);
+    setMonths(ex.m);
+    generate(ex.n, ex.m);
   };
 
   const addEntry = () => {
@@ -374,6 +386,12 @@ export default function IPTimeline() {
             Track and visualize subnet utilization trends over time with an
             interactive multi-line chart.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         {/* Mode switcher */}
@@ -460,7 +478,7 @@ export default function IPTimeline() {
               </div>
               <button
                 className="btn-primary"
-                onClick={generate}
+                onClick={() => generate()}
                 style={{ background: "#b3adff", color: "#0a0c10" }}
               >
                 Generate Timeline

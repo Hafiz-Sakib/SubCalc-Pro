@@ -48,21 +48,21 @@ export default function WildcardMask() {
   const copy = (t) =>
     navigator.clipboard.writeText(t).then(() => setToast("Copied!"));
 
-  const convert = () => {
+  const convert = (modeVal = mode, inputVal = input) => {
     setError("");
     setResult(null);
-    if (mode === "mask2wild") {
-      if (!isValidMask(input)) {
+    if (modeVal === "mask2wild") {
+      if (!isValidMask(inputVal)) {
         setError(
           "Invalid subnet mask. Must be a valid contiguous mask like 255.255.255.0",
         );
         return;
       }
-      const maskInt = maskToInt(input);
+      const maskInt = maskToInt(inputVal);
       const wildcardInt = ~maskInt >>> 0;
-      const cidr = maskToCIDR(input);
+      const cidr = maskToCIDR(inputVal);
       setResult({
-        subnetMask: input,
+        subnetMask: inputVal,
         wildcard: intToMask(wildcardInt),
         cidr: `/${cidr}`,
         hostBits: 32 - cidr,
@@ -70,18 +70,18 @@ export default function WildcardMask() {
         usableHosts:
           cidr <= 30 ? Math.pow(2, 32 - cidr) - 2 : cidr === 31 ? 2 : 1,
       });
-    } else if (mode === "wild2mask") {
-      if (!isValidWildcard(input)) {
+    } else if (modeVal === "wild2mask") {
+      if (!isValidWildcard(inputVal)) {
         setError("Invalid wildcard mask.");
         return;
       }
-      const wcInt = maskToInt(input);
+      const wcInt = maskToInt(inputVal);
       const maskInt = ~wcInt >>> 0;
       const mask = intToMask(maskInt);
       const cidr = maskToCIDR(mask);
       setResult({
         subnetMask: mask,
-        wildcard: input,
+        wildcard: inputVal,
         cidr: `/${cidr}`,
         hostBits: 32 - cidr,
         totalHosts: Math.pow(2, 32 - cidr),
@@ -89,7 +89,7 @@ export default function WildcardMask() {
           cidr <= 30 ? Math.pow(2, 32 - cidr) - 2 : cidr === 31 ? 2 : 1,
       });
     } else {
-      const cidr = parseInt(input);
+      const cidr = parseInt(inputVal);
       if (isNaN(cidr) || cidr < 0 || cidr > 32) {
         setError("CIDR prefix must be 0–32.");
         return;
@@ -106,6 +106,17 @@ export default function WildcardMask() {
           cidr <= 30 ? Math.pow(2, 32 - cidr) - 2 : cidr === 31 ? 2 : 1,
       });
     }
+  };
+
+  const EXAMPLES = [
+    { label: "Mask 255.255.255.0", mode: "mask2wild", input: "255.255.255.0" },
+    { label: "Wildcard 0.0.0.63", mode: "wild2mask", input: "0.0.0.63" },
+    { label: "CIDR /28", mode: "cidr2both", input: "28" },
+  ];
+  const runExample = (ex) => {
+    setMode(ex.mode);
+    setInput(ex.input);
+    convert(ex.mode, ex.input);
   };
 
   const commonMasks = [
@@ -152,6 +163,12 @@ export default function WildcardMask() {
             Convert between subnet masks, wildcard masks, and CIDR notation for
             ACL and routing configuration.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         <div
@@ -232,7 +249,7 @@ export default function WildcardMask() {
             )}
             <button
               className="btn-primary"
-              onClick={convert}
+              onClick={() => convert()}
               style={{ background: "var(--orange)", color: "#0a0c10" }}
             >
               Convert

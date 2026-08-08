@@ -106,10 +106,21 @@ export default function IPClass() {
     setResult(null);
   };
 
-  const identify = () => {
-    if (!isValidIP(ip)) return;
-    const cls = getClass(ip);
-    setResult({ ip, cls, data: CLASS_DATA[cls] || null });
+  const identify = (val = ip) => {
+    if (!isValidIP(val)) return;
+    const cls = getClass(val);
+    setResult({ ip: val, cls, data: CLASS_DATA[cls] || null });
+  };
+
+  const EXAMPLES = [
+    { label: "10.1.2.3 (Class A)", ip: "10.1.2.3" },
+    { label: "172.16.5.4 (Class B)", ip: "172.16.5.4" },
+    { label: "192.168.1.1 (Class C)", ip: "192.168.1.1" },
+  ];
+  const runExample = (ex) => {
+    setIp(ex.ip);
+    setIpValid(true);
+    identify(ex.ip);
   };
 
   return (
@@ -143,6 +154,12 @@ export default function IPClass() {
             Identify the classful network class (A/B/C/D/E) of any IP address
             with full details.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         <div
@@ -164,7 +181,7 @@ export default function IPClass() {
             />
             <button
               className="btn-primary"
-              onClick={identify}
+              onClick={() => identify()}
               disabled={!ipValid}
             >
               Identify

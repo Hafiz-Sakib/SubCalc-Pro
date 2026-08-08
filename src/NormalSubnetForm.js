@@ -80,13 +80,12 @@ function NormalSubnetForm() {
     else setIpValid(null);
   }, [ip]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const runCalculation = (ipVal, maskVal, subnetsVal) => {
     setError("");
-    if (!isValidIP(ip)) { setError("Invalid IP address format."); return; }
-    const baseIp = ipToInt(ip);
-    const originalMaskInt = parseInt(originalMask);
-    const numSubnetsInt = parseInt(numSubnets);
+    if (!isValidIP(ipVal)) { setError("Invalid IP address format."); return; }
+    const baseIp = ipToInt(ipVal);
+    const originalMaskInt = parseInt(maskVal);
+    const numSubnetsInt = parseInt(subnetsVal);
     if (originalMaskInt < 0 || originalMaskInt > 32) { setError("Subnet mask must be between 0 and 32."); return; }
     if (numSubnetsInt < 1 || numSubnetsInt > 1024) { setError("Number of subnets must be between 1 and 1024."); return; }
     const additionalBits = Math.ceil(Math.log2(numSubnetsInt));
@@ -96,7 +95,7 @@ function NormalSubnetForm() {
     sessionStorage.setItem("subnets", JSON.stringify(subnets));
 
     // Save history
-    const entry = { ip, mask: originalMask, subnets: numSubnets, time: new Date().toLocaleTimeString(), type: 'FLSM' };
+    const entry = { ip: ipVal, mask: maskVal, subnets: subnetsVal, time: new Date().toLocaleTimeString(), type: 'FLSM' };
     const newHistory = [entry, ...history].slice(0, 5);
     setHistory(newHistory);
     localStorage.setItem("flsm_history", JSON.stringify(newHistory));
@@ -104,10 +103,25 @@ function NormalSubnetForm() {
     navigate("/normal-subnet-results");
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    runCalculation(ip, originalMask, numSubnets);
+  };
+
   const loadHistory = (entry) => {
     setIp(entry.ip);
     setOriginalMask(entry.mask);
     setNumSubnets(entry.subnets);
+  };
+
+  const EXAMPLES = [
+    { label: "192.168.1.0 /24 → 4", ip: "192.168.1.0", mask: "24", subnets: "4" },
+    { label: "10.0.0.0 /8 → 16", ip: "10.0.0.0", mask: "8", subnets: "16" },
+    { label: "172.16.0.0 /16 → 8", ip: "172.16.0.0", mask: "16", subnets: "8" },
+  ];
+  const runExample = (ex) => {
+    setIp(ex.ip); setOriginalMask(ex.mask); setNumSubnets(ex.subnets);
+    runCalculation(ex.ip, ex.mask, ex.subnets);
   };
 
   return (
@@ -122,6 +136,12 @@ function NormalSubnetForm() {
           <div className="section-tag">Fixed Length Subnet Masking</div>
           <h1 style={{ fontSize: 36, fontWeight: 800, marginBottom: 8 }}>FLSM Calculator</h1>
           <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>Divide a network into equal-sized subnets with uniform prefix length.</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 14, alignItems: 'center' }}>
+            <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         <div className={history.length > 0 ? 'form-history-grid' : ''}>

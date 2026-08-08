@@ -164,18 +164,30 @@ export default function BinaryConverter() {
   const copy = (text) =>
     navigator.clipboard.writeText(text).then(() => setToast("Copied!"));
 
-  const convertDecToBin = () => {
+  const convertDecToBin = (val = decIP) => {
     setError("");
-    if (!isValidIP(decIP)) {
+    if (!isValidIP(val)) {
       setError("Invalid IP address.");
       return;
     }
     setResult({
-      decimal: decIP,
-      binary: ipToBinary(decIP),
-      hex: ipToHex(decIP),
-      integer: ipToInt(decIP),
+      decimal: val,
+      binary: ipToBinary(val),
+      hex: ipToHex(val),
+      integer: ipToInt(val),
     });
+  };
+
+  const EXAMPLES = [
+    { label: "192.168.1.1", ip: "192.168.1.1" },
+    { label: "10.0.0.5", ip: "10.0.0.5" },
+    { label: "172.16.254.1", ip: "172.16.254.1" },
+  ];
+  const runExample = (ex) => {
+    setMode("dec2bin");
+    setDecIP(ex.ip);
+    setError("");
+    convertDecToBin(ex.ip);
   };
 
   const convertBinToDec = () => {
@@ -272,6 +284,12 @@ export default function BinaryConverter() {
             Convert IP addresses between decimal, binary, hex, and integer —
             with an interactive bit editor.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         {/* Mode tabs */}
@@ -317,7 +335,7 @@ export default function BinaryConverter() {
                   placeholder="192.168.1.1"
                   onKeyDown={(e) => e.key === "Enter" && convertDecToBin()}
                 />
-                <button className="btn-primary" onClick={convertDecToBin}>
+                <button className="btn-primary" onClick={() => convertDecToBin()}>
                   Convert
                 </button>
               </div>

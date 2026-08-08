@@ -187,18 +187,18 @@ export default function SubnetVisualMap() {
   const [error, setError] = useState("");
   const [toast, setToast] = useState("");
 
-  const generate = () => {
+  const generate = (ipVal = baseIP, prefixVal = prefix, splitsVal = splits) => {
     setError("");
-    if (!isValidIP(baseIP)) {
+    if (!isValidIP(ipVal)) {
       setError("Invalid IP address.");
       return;
     }
-    const pfx = parseInt(prefix);
+    const pfx = parseInt(prefixVal);
     if (isNaN(pfx) || pfx < 0 || pfx > 28) {
       setError("Prefix must be 0–28.");
       return;
     }
-    setTree(buildSubnetTree(baseIP, pfx, splits));
+    setTree(buildSubnetTree(ipVal, pfx, splitsVal));
     setSelected(null);
   };
 
@@ -311,7 +311,7 @@ export default function SubnetVisualMap() {
             </div>
             <button
               className="btn-primary"
-              onClick={generate}
+              onClick={() => generate()}
               style={{
                 background: "var(--cyan)",
                 color: "#0a0c10",
@@ -335,6 +335,7 @@ export default function SubnetVisualMap() {
                   setBaseIP(ex.ip);
                   setPrefix(ex.prefix);
                   setSplits(ex.splits);
+                  generate(ex.ip, ex.prefix, ex.splits);
                 }}
               >
                 {ex.label}

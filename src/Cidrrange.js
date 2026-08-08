@@ -59,21 +59,21 @@ export default function CIDRRange() {
   const copy = (text) =>
     navigator.clipboard.writeText(text).then(() => setToast("Copied!"));
 
-  const calculate = () => {
+  const calculate = (ipVal = ip, prefixVal = prefix) => {
     setError("");
     setResult(null);
-    if (!isValidIP(ip)) {
+    if (!isValidIP(ipVal)) {
       setError("Invalid IP address.");
       return;
     }
-    const pfx = parseInt(prefix);
+    const pfx = parseInt(prefixVal);
     if (isNaN(pfx) || pfx < 0 || pfx > 32) {
       setError("Prefix length must be 0–32.");
       return;
     }
 
     const mask = cidrToMask(pfx);
-    const ipInt = ipToInt(ip);
+    const ipInt = ipToInt(ipVal);
     const network = (ipInt & mask) >>> 0;
     const broadcast = (network | (~mask >>> 0)) >>> 0;
     const firstHost = pfx < 31 ? network + 1 : network;
@@ -82,7 +82,7 @@ export default function CIDRRange() {
     const usableHosts = pfx <= 30 ? totalHosts - 2 : pfx === 31 ? 2 : 1;
 
     setResult({
-      input: `${ip}/${pfx}`,
+      input: `${ipVal}/${pfx}`,
       network: intToIP(network),
       networkCIDR: `${intToIP(network)}/${pfx}`,
       broadcast: intToIP(broadcast),
@@ -181,7 +181,7 @@ export default function CIDRRange() {
               />
             </div>
             <div style={{ paddingTop: 27 }}>
-              <button className="btn-primary" onClick={calculate}>
+              <button className="btn-primary" onClick={() => calculate()}>
                 Expand
               </button>
             </div>
@@ -197,7 +197,7 @@ export default function CIDRRange() {
                   const [eip, epfx] = eg.split("/");
                   setIp(eip);
                   setPrefix(epfx);
-                  setResult(null);
+                  calculate(eip, epfx);
                 }}
               >
                 {eg}

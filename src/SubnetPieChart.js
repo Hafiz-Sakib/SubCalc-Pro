@@ -36,6 +36,12 @@ const CATEGORIES = [
   { key: "free", label: "Unallocated", color: "#1e2d45" },
 ];
 
+const PRESET_DATA = {
+  office: { servers: 10, workstations: 80, networking: 5, reserved: 5, iot: 10 },
+  datacenter: { servers: 120, workstations: 10, networking: 20, reserved: 10, iot: 0 },
+  campus: { servers: 20, workstations: 150, networking: 15, reserved: 5, iot: 50 },
+};
+
 function DonutChart({ data, total, size = 240 }) {
   const cx = size / 2,
     cy = size / 2;
@@ -152,24 +158,22 @@ export default function SubnetPieChart() {
     })),
   );
 
-  const calculate = () => {
+  const calculate = (cidrVal = cidr, allocsVal = allocs) => {
     setError("");
-    if (!isValidCIDR(cidr)) {
+    if (!isValidCIDR(cidrVal)) {
       setError("Enter a valid CIDR (e.g. 192.168.0.0/24, prefix /8–/30).");
       return;
     }
-    const [ip, pfxStr] = cidr.trim().split("/");
+    const [ip, pfxStr] = cidrVal.trim().split("/");
     const pfx = parseInt(pfxStr);
     const mask = (0xffffffff << (32 - pfx)) >>> 0;
     const network = (ipToInt(ip) & mask) >>> 0;
     const total = Math.pow(2, 32 - pfx);
     const usable = Math.max(0, total - 2);
 
-    console.log({ network: intToIP(network), total, usable });
-
     let allocated = 0;
     const counts = {};
-    for (const a of allocs) {
+    for (const a of allocsVal) {
       const n = parseInt(a.count) || 0;
       counts[a.key] = n;
       allocated += n;
@@ -212,38 +216,29 @@ export default function SubnetPieChart() {
   };
 
   const applyPreset = (preset) => {
-    const usable = result ? result.usable : 254;
-    console.log("Applying preset", preset, "with usable IPs:", usable);
-    const presets = {
-      office: {
-        servers: 10,
-        workstations: 80,
-        networking: 5,
-        reserved: 5,
-        iot: 10,
-      },
-      datacenter: {
-        servers: 120,
-        workstations: 10,
-        networking: 20,
-        reserved: 10,
-        iot: 0,
-      },
-      campus: {
-        servers: 20,
-        workstations: 150,
-        networking: 15,
-        reserved: 5,
-        iot: 50,
-      },
-    };
-    const p = presets[preset];
+    const p = PRESET_DATA[preset];
     setAllocs(
       CATEGORIES.filter((c) => c.key !== "free").map((c) => ({
         key: c.key,
         count: String(p[c.key] || 0),
       })),
     );
+  };
+
+  const EXAMPLES = [
+    { label: "192.168.0.0/24 → Office", cidr: "192.168.0.0/24", preset: "office" },
+    { label: "10.0.0.0/22 → Datacenter", cidr: "10.0.0.0/22", preset: "datacenter" },
+    { label: "172.16.0.0/23 → Campus", cidr: "172.16.0.0/23", preset: "campus" },
+  ];
+  const runExample = (ex) => {
+    const p = PRESET_DATA[ex.preset];
+    const allocsVal = CATEGORIES.filter((c) => c.key !== "free").map((c) => ({
+      key: c.key,
+      count: String(p[c.key] || 0),
+    }));
+    setCidr(ex.cidr);
+    setAllocs(allocsVal);
+    calculate(ex.cidr, allocsVal);
   };
 
   return (
@@ -287,6 +282,12 @@ export default function SubnetPieChart() {
             Visualize how IP addresses are distributed across device categories
             in any subnet.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         {/* Input card */}
@@ -315,7 +316,7 @@ export default function SubnetPieChart() {
             </div>
             <button
               className="btn-primary"
-              onClick={calculate}
+              onClick={() => calculate()}
               style={{ background: "#1fe3ae", color: "#0a0c10" }}
             >
               Generate Chart

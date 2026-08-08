@@ -54,19 +54,20 @@ export default function IPHeatmap() {
   const [toast, setToast] = useState("");
   const [isPainting, setIsPainting] = useState(false);
 
-  const generate = () => {
+  const generate = (cidrVal = cidr) => {
     setError("");
-    if (!isValidCIDR(cidr)) {
+    if (!isValidCIDR(cidrVal)) {
       setError("Enter a valid CIDR between /16 and /24 (e.g. 192.168.1.0/24).");
       return;
     }
-    const [ip, pfxStr] = cidr.trim().split("/");
+    const [ip, pfxStr] = cidrVal.trim().split("/");
     const pfx = parseInt(pfxStr);
     const mask = (0xffffffff << (32 - pfx)) >>> 0;
     const network = (ipToInt(ip) & mask) >>> 0;
     const size = Math.pow(2, 32 - pfx);
     setParsed({ network, pfx, size, ip: intToIP(network) });
     setAllocations({});
+    return { network, pfx, size, ip: intToIP(network) };
   };
 
   const paint = useCallback(
@@ -161,6 +162,17 @@ export default function IPHeatmap() {
     },
   ];
 
+  const EXAMPLES = [
+    { label: "192.168.1.0/24 → Web Server", cidr: "192.168.1.0/24", presetIndex: 0 },
+    { label: "10.0.0.0/24 → Office Network", cidr: "10.0.0.0/24", presetIndex: 1 },
+    { label: "172.16.5.0/24 → Data Center", cidr: "172.16.5.0/24", presetIndex: 2 },
+  ];
+  const runExample = (ex) => {
+    setCidr(ex.cidr);
+    const p = generate(ex.cidr);
+    if (p) setAllocations(presets[ex.presetIndex].apply(p.size));
+  };
+
   return (
     <div
       className="page-wrapper"
@@ -198,6 +210,12 @@ export default function IPHeatmap() {
             Visually plan and paint IP address allocations within a subnet.
             Click or drag to assign address types.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 14, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Try an example:</span>
+            {EXAMPLES.map((ex, i) => (
+              <button key={i} type="button" className="chip" onClick={() => runExample(ex)}>{ex.label}</button>
+            ))}
+          </div>
         </div>
 
         {/* Input */}
@@ -225,7 +243,7 @@ export default function IPHeatmap() {
             </div>
             <button
               className="btn-primary"
-              onClick={generate}
+              onClick={() => generate()}
               style={{ background: "#ff8fbb", color: "#0a0c10" }}
             >
               Load Network

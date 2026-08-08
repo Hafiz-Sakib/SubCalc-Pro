@@ -118,8 +118,8 @@ export default function NetworkSummary() {
     setResult(null);
   };
 
-  const calculate = () => {
-    const errs = inputs.map((v, i) => {
+  const calculate = (inputsVal = inputs) => {
+    const errs = inputsVal.map((v, i) => {
       if (!v.trim()) return `Row ${i + 1}: Empty`;
       if (!isValidCIDR(v)) return `Row ${i + 1}: Invalid CIDR`;
       return null;
@@ -128,7 +128,7 @@ export default function NetworkSummary() {
     setErrors(valid);
     if (valid.length > 0) return;
 
-    const parsed = inputs.map((v) => parseCIDR(v));
+    const parsed = inputsVal.map((v) => parseCIDR(v));
     setResult(summarizeNetworks(parsed));
   };
 
@@ -196,8 +196,8 @@ export default function NetworkSummary() {
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setInputs([...ex]);
-                setResult(null);
                 setErrors([]);
+                calculate(ex);
               }}
             >
               Example {i + 1} ({ex.length} nets)
@@ -277,7 +277,7 @@ export default function NetworkSummary() {
           <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
             <button
               className="btn-primary"
-              onClick={calculate}
+              onClick={() => calculate()}
               style={{ flex: 1, background: "#8ec5ff", color: "#0a0c10" }}
             >
               Summarize
