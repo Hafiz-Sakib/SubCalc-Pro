@@ -6,7 +6,7 @@ const tools = [
   {
     to: "/normal-subnet",
     icon: "▦",
-    color: "#fabd2f",
+    color: "#ffc93c",
     bg: "rgba(250,189,47,0.1)",
     border: "rgba(250,189,47,0.2)",
     badge: "FLSM",
@@ -22,7 +22,7 @@ const tools = [
   {
     to: "/vlsm-subnet",
     icon: "◈",
-    color: "#06d6a0",
+    color: "#1fe3ae",
     bg: "rgba(6,214,160,0.1)",
     border: "rgba(6,214,160,0.2)",
     badge: "VLSM",
@@ -34,7 +34,7 @@ const tools = [
   {
     to: "/ip-info",
     icon: "ⓘ",
-    color: "#a29bfe",
+    color: "#b3adff",
     bg: "rgba(162,155,254,0.1)",
     border: "rgba(162,155,254,0.2)",
     badge: "IP Info",
@@ -50,7 +50,7 @@ const tools = [
   {
     to: "/binary-converter",
     icon: "⟺",
-    color: "#74b9ff",
+    color: "#8ec5ff",
     bg: "rgba(116,185,255,0.1)",
     border: "rgba(116,185,255,0.2)",
     badge: "Converter",
@@ -62,7 +62,7 @@ const tools = [
   {
     to: "/cidr-range",
     icon: "⇔",
-    color: "#fd79a8",
+    color: "#ff8fbb",
     bg: "rgba(253,121,168,0.1)",
     border: "rgba(253,121,168,0.2)",
     badge: "CIDR",
@@ -78,7 +78,7 @@ const tools = [
   {
     to: "/wildcard-mask",
     icon: "⊛",
-    color: "#fd9644",
+    color: "#ffa85c",
     bg: "rgba(253,150,68,0.1)",
     border: "rgba(253,150,68,0.2)",
     badge: "Wildcard",
@@ -90,7 +90,7 @@ const tools = [
   {
     to: "/overlap-detector",
     icon: "⊕",
-    color: "#06d6a0",
+    color: "#1fe3ae",
     bg: "rgba(6,214,160,0.08)",
     border: "rgba(6,214,160,0.2)",
     badge: "Overlap",
@@ -102,7 +102,7 @@ const tools = [
   {
     to: "/ip-class",
     icon: "◉",
-    color: "#fabd2f",
+    color: "#ffc93c",
     bg: "rgba(250,189,47,0.08)",
     border: "rgba(250,189,47,0.2)",
     badge: "Class",
@@ -114,7 +114,7 @@ const tools = [
   {
     to: "/subnet-quiz",
     icon: "?",
-    color: "#a29bfe",
+    color: "#b3adff",
     bg: "rgba(162,155,254,0.08)",
     border: "rgba(162,155,254,0.2)",
     badge: "Quiz",
@@ -126,7 +126,7 @@ const tools = [
   {
     to: "/network-summary",
     icon: "≡",
-    color: "#74b9ff",
+    color: "#8ec5ff",
     bg: "rgba(116,185,255,0.08)",
     border: "rgba(116,185,255,0.2)",
     badge: "Summary",
@@ -142,7 +142,7 @@ const tools = [
   {
     to: "/subnet-visual-map",
     icon: "🗺️",
-    color: "#ff6b6b",
+    color: "#ff8a8a",
     bg: "rgba(255,107,107,0.1)",
     border: "rgba(255,107,107,0.2)",
     badge: "Visual",
@@ -182,7 +182,7 @@ const tools = [
   {
     to: "/NetworkTrafficChart",
     icon: "📶",
-    color: "#74b9ff",
+    color: "#8ec5ff",
     bg: "rgba(116,185,255,0.1)",
     border: "rgba(116,185,255,0.2)",
     badge: "Traffic",
@@ -194,7 +194,7 @@ const tools = [
   {
     to: "/SubnetPieChart",
     icon: "🥧",
-    color: "#fd79a8",
+    color: "#ff8fbb",
     bg: "rgba(253,121,168,0.1)",
     border: "rgba(253,121,168,0.2)",
     badge: "Pie Chart",
@@ -206,7 +206,7 @@ const tools = [
   {
     to: "/iptimeline",
     icon: "📅",
-    color: "#06d6a0",
+    color: "#1fe3ae",
     bg: "rgba(6,214,160,0.1)",
     border: "rgba(6,214,160,0.2)",
     badge: "Timeline",

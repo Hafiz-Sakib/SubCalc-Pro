@@ -23,12 +23,12 @@ function isValidIP(ip) {
 }
 
 const PALETTE = [
-  "#fabd2f",
-  "#06d6a0",
-  "#74b9ff",
-  "#fd79a8",
-  "#a29bfe",
-  "#fd9644",
+  "#ffc93c",
+  "#1fe3ae",
+  "#8ec5ff",
+  "#ff8fbb",
+  "#b3adff",
+  "#ffa85c",
   "#55efc4",
   "#ffd166",
   "#81ecec",

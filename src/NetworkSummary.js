@@ -231,7 +231,7 @@ export default function NetworkSummary() {
                     fontSize: 11,
                     fontFamily: "Operator Mono, monospace",
                     fontWeight: 700,
-                    color: "#74b9ff",
+                    color: "#8ec5ff",
                     flexShrink: 0,
                   }}
                 >
@@ -251,7 +251,7 @@ export default function NetworkSummary() {
                     style={{
                       background: "rgba(239,68,68,0.1)",
                       border: "1px solid rgba(239,68,68,0.2)",
-                      color: "#f87171",
+                      color: "#ff8a8a",
                       borderRadius: 6,
                       padding: "6px 10px",
                       cursor: "pointer",
@@ -278,7 +278,7 @@ export default function NetworkSummary() {
             <button
               className="btn-primary"
               onClick={calculate}
-              style={{ flex: 1, background: "#74b9ff", color: "#0a0c10" }}
+              style={{ flex: 1, background: "#8ec5ff", color: "#0a0c10" }}
             >
               Summarize
             </button>
@@ -327,7 +327,7 @@ export default function NetworkSummary() {
                     className="stat-value"
                     style={{
                       fontSize: s.label === "Supernet" ? 16 : 20,
-                      color: "#74b9ff",
+                      color: "#8ec5ff",
                     }}
                   >
                     {s.value}
@@ -345,13 +345,13 @@ export default function NetworkSummary() {
                 {
                   label: "Supernet CIDR",
                   value: result.supernet,
-                  color: "#74b9ff",
+                  color: "#8ec5ff",
                 },
                 { label: "Network Address", value: result.network },
                 {
                   label: "Broadcast Address",
                   value: result.broadcast,
-                  color: "#fd79a8",
+                  color: "#ff8fbb",
                 },
                 { label: "Networks Summarized", value: result.networks.length },
               ].map(({ label, value, color }) => (
@@ -444,7 +444,7 @@ export default function NetworkSummary() {
                           style={{
                             fontFamily: "Operator Mono, monospace",
                             fontSize: 13,
-                            color: "#74b9ff",
+                            color: "#8ec5ff",
                           }}
                         >
                           {n.cidr}
@@ -465,7 +465,7 @@ export default function NetworkSummary() {
                           style={{
                             fontFamily: "Operator Mono, monospace",
                             fontSize: 12,
-                            color: "#fd79a8",
+                            color: "#ff8fbb",
                           }}
                         >
                           {intToIP(n.broadcast)}

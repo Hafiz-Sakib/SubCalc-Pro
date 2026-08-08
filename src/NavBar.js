@@ -105,7 +105,7 @@ export default function NavBar() {
               width="9"
               height="9"
               rx="2"
-              fill="#fabd2f"
+              fill="#ffc93c"
               opacity="0.9"
             />
             <rect
@@ -114,7 +114,7 @@ export default function NavBar() {
               width="9"
               height="9"
               rx="2"
-              fill="#fabd2f"
+              fill="#ffc93c"
               opacity="0.4"
             />
             <rect
@@ -123,7 +123,7 @@ export default function NavBar() {
               width="9"
               height="9"
               rx="2"
-              fill="#fabd2f"
+              fill="#ffc93c"
               opacity="0.4"
             />
             <rect
@@ -132,7 +132,7 @@ export default function NavBar() {
               width="9"
               height="9"
               rx="2"
-              fill="#06d6a0"
+              fill="#1fe3ae"
               opacity="0.8"
             />
           </svg>
@@ -222,7 +222,7 @@ export default function NavBar() {
                   width="9"
                   height="9"
                   rx="2"
-                  fill="#fabd2f"
+                  fill="#ffc93c"
                   opacity="0.9"
                 />
                 <rect
@@ -231,7 +231,7 @@ export default function NavBar() {
                   width="9"
                   height="9"
                   rx="2"
-                  fill="#fabd2f"
+                  fill="#ffc93c"
                   opacity="0.4"
                 />
                 <rect
@@ -240,7 +240,7 @@ export default function NavBar() {
                   width="9"
                   height="9"
                   rx="2"
-                  fill="#fabd2f"
+                  fill="#ffc93c"
                   opacity="0.4"
                 />
                 <rect
@@ -249,7 +249,7 @@ export default function NavBar() {
                   width="9"
                   height="9"
                   rx="2"
-                  fill="#06d6a0"
+                  fill="#1fe3ae"
                   opacity="0.8"
                 />
               </svg>

@@ -245,16 +245,16 @@ function shuffle(arr) {
 }
 
 const categoryColors = {
-  "Host Counting": "#fabd2f",
-  "Subnet Masks": "#06d6a0",
-  "Network Address": "#74b9ff",
-  "IP Classes": "#a29bfe",
-  Subnetting: "#fd9644",
-  "Wildcard Masks": "#fd79a8",
-  Broadcast: "#06d6a0",
-  "IP Classification": "#fabd2f",
-  Sizing: "#74b9ff",
-  Concepts: "#a29bfe",
+  "Host Counting": "#ffc93c",
+  "Subnet Masks": "#1fe3ae",
+  "Network Address": "#8ec5ff",
+  "IP Classes": "#b3adff",
+  Subnetting: "#ffa85c",
+  "Wildcard Masks": "#ff8fbb",
+  Broadcast: "#1fe3ae",
+  "IP Classification": "#ffc93c",
+  Sizing: "#8ec5ff",
+  Concepts: "#b3adff",
 };
 
 export default function SubnetQuiz() {
@@ -579,7 +579,7 @@ export default function SubnetQuiz() {
                   }}
                 >
                   Your answer:{" "}
-                  <span style={{ color: a.ok ? "var(--cyan)" : "#f87171" }}>
+                  <span style={{ color: a.ok ? "var(--cyan)" : "#ff8a8a" }}>
                     {a.selected}
                   </span>
                   {!a.ok && (
@@ -639,7 +639,7 @@ export default function SubnetQuiz() {
   const q = questions[current];
   const timerPct = (timer / 30) * 100;
   const timerColor =
-    timer > 15 ? "var(--cyan)" : timer > 7 ? "var(--gold)" : "#f87171";
+    timer > 15 ? "var(--cyan)" : timer > 7 ? "var(--gold)" : "#ff8a8a";
 
   return (
     <div

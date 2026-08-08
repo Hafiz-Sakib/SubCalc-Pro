@@ -72,12 +72,12 @@ function analyzeCIDR(cidr) {
 }
 
 const COLORS = [
-  "#fabd2f",
-  "#06d6a0",
-  "#74b9ff",
-  "#fd79a8",
-  "#a29bfe",
-  "#fd9644",
+  "#ffc93c",
+  "#1fe3ae",
+  "#8ec5ff",
+  "#ff8fbb",
+  "#b3adff",
+  "#ffa85c",
 ];
 const PRESETS = [
   ["/24", "192.168.1.0/24", "192.168.2.0/24", "192.168.3.0/24"],
@@ -280,7 +280,7 @@ export default function SubnetComparison() {
                     style={{
                       background: "rgba(239,68,68,0.1)",
                       border: "1px solid rgba(239,68,68,0.2)",
-                      color: "#f87171",
+                      color: "#ff8a8a",
                       borderRadius: 6,
                       padding: "6px 10px",
                       cursor: "pointer",
@@ -554,7 +554,7 @@ export default function SubnetComparison() {
                               style={{
                                 fontFamily: "Operator Mono, monospace",
                                 fontSize: 12,
-                                color: "#fd79a8",
+                                color: "#ff8fbb",
                               }}
                             >
                               {r.broadcast}

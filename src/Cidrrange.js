@@ -273,7 +273,7 @@ export default function CIDRRange() {
                 {
                   label: "Broadcast Address",
                   value: result.broadcast,
-                  color: "#fd79a8",
+                  color: "#ff8fbb",
                 },
                 {
                   label: "First Usable Host",
@@ -404,7 +404,7 @@ export default function CIDRRange() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: 10,
-                    color: "#fd79a8",
+                    color: "#ff8fbb",
                     fontFamily: "Operator Mono, monospace",
                   }}
                 >

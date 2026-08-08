@@ -28,11 +28,11 @@ function isValidCIDR(cidr) {
 }
 
 const CATEGORIES = [
-  { key: "servers", label: "Servers", color: "#06d6a0" },
-  { key: "workstations", label: "Workstations", color: "#74b9ff" },
-  { key: "networking", label: "Network Devices", color: "#fabd2f" },
-  { key: "reserved", label: "Reserved", color: "#fd79a8" },
-  { key: "iot", label: "IoT Devices", color: "#a29bfe" },
+  { key: "servers", label: "Servers", color: "#1fe3ae" },
+  { key: "workstations", label: "Workstations", color: "#8ec5ff" },
+  { key: "networking", label: "Network Devices", color: "#ffc93c" },
+  { key: "reserved", label: "Reserved", color: "#ff8fbb" },
+  { key: "iot", label: "IoT Devices", color: "#b3adff" },
   { key: "free", label: "Unallocated", color: "#1e2d45" },
 ];
 
@@ -316,7 +316,7 @@ export default function SubnetPieChart() {
             <button
               className="btn-primary"
               onClick={calculate}
-              style={{ background: "#06d6a0", color: "#0a0c10" }}
+              style={{ background: "#1fe3ae", color: "#0a0c10" }}
             >
               Generate Chart
             </button>
@@ -399,7 +399,7 @@ export default function SubnetPieChart() {
                 border: "1px solid rgba(253,121,168,0.3)",
                 borderRadius: 8,
                 fontSize: 12,
-                color: "#fd79a8",
+                color: "#ff8fbb",
               }}
             >
               {error}

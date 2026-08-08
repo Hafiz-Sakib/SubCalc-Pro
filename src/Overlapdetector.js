@@ -201,7 +201,7 @@ export default function OverlapDetector() {
                       background: "rgba(239,68,68,0.08)",
                       border: "1px solid rgba(239,68,68,0.15)",
                       borderRadius: 6,
-                      color: "#f87171",
+                      color: "#ff8a8a",
                       cursor: "pointer",
                       padding: "6px 10px",
                       fontSize: 14,
@@ -303,7 +303,7 @@ export default function OverlapDetector() {
                     fontFamily: "Operator Mono, monospace",
                     fontSize: 16,
                     fontWeight: 700,
-                    color: result.hasOverlap ? "#f87171" : "var(--cyan)",
+                    color: result.hasOverlap ? "#ff8a8a" : "var(--cyan)",
                   }}
                 >
                   {result.hasOverlap
@@ -376,7 +376,7 @@ export default function OverlapDetector() {
                         style={{
                           fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
-                          color: isInOverlap ? "#f87171" : "var(--cyan)",
+                          color: isInOverlap ? "#ff8a8a" : "var(--cyan)",
                         }}
                       >
                         {s.cidr}
@@ -413,7 +413,7 @@ export default function OverlapDetector() {
                     fontWeight: 700,
                     textTransform: "uppercase",
                     letterSpacing: "0.1em",
-                    color: "#f87171",
+                    color: "#ff8a8a",
                   }}
                 >
                   Conflicting Pairs
@@ -438,7 +438,7 @@ export default function OverlapDetector() {
                         style={{
                           fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
-                          color: "#f87171",
+                          color: "#ff8a8a",
                         }}
                       >
                         {o.a}
@@ -448,7 +448,7 @@ export default function OverlapDetector() {
                         style={{
                           fontFamily: "Operator Mono, monospace",
                           fontSize: 13,
-                          color: "#f87171",
+                          color: "#ff8a8a",
                         }}
                       >
                         {o.b}

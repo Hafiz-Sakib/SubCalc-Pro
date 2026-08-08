@@ -19,12 +19,12 @@ const MONTHS = [
 ];
 
 const SERIES_COLORS = [
-  "#06d6a0",
-  "#74b9ff",
-  "#fabd2f",
-  "#fd79a8",
-  "#a29bfe",
-  "#fd9644",
+  "#1fe3ae",
+  "#8ec5ff",
+  "#ffc93c",
+  "#ff8fbb",
+  "#b3adff",
+  "#ffa85c",
 ];
 
 function generateTimeline(numSubnets, months) {
@@ -418,8 +418,8 @@ export default function IPTimeline() {
                   onChange={(e) => setNumSubnets(+e.target.value)}
                   style={{
                     cursor: "pointer",
-                    background: "#111827",
-                    color: "#f0f4ff",
+                    background: "#161d30",
+                    color: "#f8faff",
                     colorScheme: "dark",
                   }}
                 >
@@ -427,7 +427,7 @@ export default function IPTimeline() {
                     <option
                       key={n}
                       value={n}
-                      style={{ background: "#111827", color: "#f0f4ff" }}
+                      style={{ background: "#161d30", color: "#f8faff" }}
                     >
                       {n} subnet{n > 1 ? "s" : ""}
                     </option>
@@ -442,8 +442,8 @@ export default function IPTimeline() {
                   onChange={(e) => setMonths(+e.target.value)}
                   style={{
                     cursor: "pointer",
-                    background: "#111827",
-                    color: "#f0f4ff",
+                    background: "#161d30",
+                    color: "#f8faff",
                     colorScheme: "dark",
                   }}
                 >
@@ -451,7 +451,7 @@ export default function IPTimeline() {
                     <option
                       key={m}
                       value={m}
-                      style={{ background: "#111827", color: "#f0f4ff" }}
+                      style={{ background: "#161d30", color: "#f8faff" }}
                     >
                       {m} months
                     </option>
@@ -461,7 +461,7 @@ export default function IPTimeline() {
               <button
                 className="btn-primary"
                 onClick={generate}
-                style={{ background: "#a29bfe", color: "#0a0c10" }}
+                style={{ background: "#b3adff", color: "#0a0c10" }}
               >
                 Generate Timeline
               </button>
@@ -506,15 +506,15 @@ export default function IPTimeline() {
                       style={{
                         flex: "0 0 80px",
                         cursor: "pointer",
-                        background: "#111827",
-                        color: "#f0f4ff",
+                        background: "#161d30",
+                        color: "#f8faff",
                         colorScheme: "dark",
                       }}
                     >
                       {MONTHS.map((m) => (
                         <option
                           key={m}
-                          style={{ background: "#111827", color: "#f0f4ff" }}
+                          style={{ background: "#161d30", color: "#f8faff" }}
                         >
                           {m}
                         </option>
@@ -565,7 +565,7 @@ export default function IPTimeline() {
                 <button
                   className="btn-primary"
                   onClick={buildManual}
-                  style={{ background: "#a29bfe", color: "#0a0c10" }}
+                  style={{ background: "#b3adff", color: "#0a0c10" }}
                 >
                   Plot Chart
                 </button>
@@ -582,7 +582,7 @@ export default function IPTimeline() {
                 border: "1px solid rgba(253,121,168,0.3)",
                 borderRadius: 8,
                 fontSize: 12,
-                color: "#fd79a8",
+                color: "#ff8fbb",
               }}
             >
               {error}
@@ -731,10 +731,10 @@ export default function IPTimeline() {
                       const last = s.data[s.data.length - 1];
                       const status =
                         last > 85
-                          ? { label: "Critical", color: "#fd79a8" }
+                          ? { label: "Critical", color: "#ff8fbb" }
                           : last > 60
-                            ? { label: "High", color: "#fabd2f" }
-                            : { label: "Normal", color: "#06d6a0" };
+                            ? { label: "High", color: "#ffc93c" }
+                            : { label: "Normal", color: "#1fe3ae" };
 
                       return (
                         <tr key={i}>
@@ -795,7 +795,7 @@ export default function IPTimeline() {
                           <td
                             style={{
                               padding: "10px 12px",
-                              color: trend >= 0 ? "#fd79a8" : "#06d6a0",
+                              color: trend >= 0 ? "#ff8fbb" : "#1fe3ae",
                               borderBottom: "1px solid var(--border-subtle)",
                             }}
                           >

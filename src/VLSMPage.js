@@ -76,7 +76,7 @@ const VLSMPage = () => {
         <div style={{ position: 'fixed', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', zIndex: 50 }}>
           <div className="card" style={{ padding: 40, maxWidth: 360, textAlign: 'center' }}>
             <div style={{ width: 48, height: 48, background: 'rgba(239,68,68,0.1)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', fontSize: 22 }}>⚠️</div>
-            <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 8, color: '#f87171' }}>No Input Data</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 8, color: '#ff8a8a' }}>No Input Data</h2>
             <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>No calculation data was found. Redirecting to home...</p>
             <Link to="/" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>Go Home</Link>
           </div>

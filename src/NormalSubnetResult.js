@@ -8,10 +8,10 @@ function NavBar() {
     <nav className="nav-bar">
       <Link to="/" className="nav-logo">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <rect x="1" y="1" width="9" height="9" rx="2" fill="#fabd2f" opacity="0.9"/>
-          <rect x="12" y="1" width="9" height="9" rx="2" fill="#fabd2f" opacity="0.4"/>
-          <rect x="1" y="12" width="9" height="9" rx="2" fill="#fabd2f" opacity="0.4"/>
-          <rect x="12" y="12" width="9" height="9" rx="2" fill="#06d6a0" opacity="0.8"/>
+          <rect x="1" y="1" width="9" height="9" rx="2" fill="#ffc93c" opacity="0.9"/>
+          <rect x="12" y="1" width="9" height="9" rx="2" fill="#ffc93c" opacity="0.4"/>
+          <rect x="1" y="12" width="9" height="9" rx="2" fill="#ffc93c" opacity="0.4"/>
+          <rect x="12" y="12" width="9" height="9" rx="2" fill="#1fe3ae" opacity="0.8"/>
         </svg>
         Sub<span>Calc</span>
       </Link>
@@ -190,7 +190,7 @@ function NormalSubnetResult() {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {subnets.map((subnet, index) => {
-                    const colors = ['#fabd2f','#06d6a0','#74b9ff','#fd79a8','#a29bfe','#fdcb6e','#55efc4','#fd9644'];
+                    const colors = ['#ffc93c','#1fe3ae','#8ec5ff','#ff8fbb','#b3adff','#fdcb6e','#55efc4','#ffa85c'];
                     const color = colors[index % colors.length];
                     return (
                       <div key={index}>

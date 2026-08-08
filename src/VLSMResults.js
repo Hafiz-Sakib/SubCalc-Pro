@@ -14,7 +14,7 @@ function NavBar() {
             width="9"
             height="9"
             rx="2"
-            fill="#fabd2f"
+            fill="#ffc93c"
             opacity="0.9"
           />
           <rect
@@ -23,7 +23,7 @@ function NavBar() {
             width="9"
             height="9"
             rx="2"
-            fill="#fabd2f"
+            fill="#ffc93c"
             opacity="0.4"
           />
           <rect
@@ -32,7 +32,7 @@ function NavBar() {
             width="9"
             height="9"
             rx="2"
-            fill="#fabd2f"
+            fill="#ffc93c"
             opacity="0.4"
           />
           <rect
@@ -41,7 +41,7 @@ function NavBar() {
             width="9"
             height="9"
             rx="2"
-            fill="#06d6a0"
+            fill="#1fe3ae"
             opacity="0.8"
           />
         </svg>
@@ -130,14 +130,14 @@ const VLSMResults = () => {
       : 1;
   console.log(maxSubnetSize);
   const palette = [
-    "#fabd2f",
-    "#06d6a0",
-    "#74b9ff",
-    "#fd79a8",
-    "#a29bfe",
+    "#ffc93c",
+    "#1fe3ae",
+    "#8ec5ff",
+    "#ff8fbb",
+    "#b3adff",
     "#fdcb6e",
     "#55efc4",
-    "#fd9644",
+    "#ffa85c",
     "#e17055",
     "#00b894",
   ];

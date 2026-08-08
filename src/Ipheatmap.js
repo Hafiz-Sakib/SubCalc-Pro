@@ -29,10 +29,10 @@ function intToIP(n) {
 }
 
 const ALLOCATION_TYPES = [
-  { label: "Servers", color: "#06d6a0", key: "servers" },
-  { label: "Workstations", color: "#74b9ff", key: "workstations" },
-  { label: "Network Devices", color: "#fabd2f", key: "network" },
-  { label: "Reserved", color: "#fd79a8", key: "reserved" },
+  { label: "Servers", color: "#1fe3ae", key: "servers" },
+  { label: "Workstations", color: "#8ec5ff", key: "workstations" },
+  { label: "Network Devices", color: "#ffc93c", key: "network" },
+  { label: "Reserved", color: "#ff8fbb", key: "reserved" },
   { label: "Free", color: "#1a2236", key: "free" },
 ];
 
@@ -226,7 +226,7 @@ export default function IPHeatmap() {
             <button
               className="btn-primary"
               onClick={generate}
-              style={{ background: "#fd79a8", color: "#0a0c10" }}
+              style={{ background: "#ff8fbb", color: "#0a0c10" }}
             >
               Load Network
             </button>
@@ -383,7 +383,7 @@ export default function IPHeatmap() {
                     const isNetwork = i === 0;
                     const isBroadcast = i === displaySize - 1;
                     const color =
-                      isNetwork || isBroadcast ? "#fd79a8" : getColor(type);
+                      isNetwork || isBroadcast ? "#ff8fbb" : getColor(type);
                     const isHov = hovered === i;
 
                     return (
